@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>考研英语单词大观 · 智能主动回忆与复习系统</title>
+    <meta name="description" content="基于考研英语一、英语二真题纯净版单词大观与艾宾浩斯遗忘曲线的考研主动回忆与间隔复习系统" />
+    <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="./icon-192.svg" />
+    
+    <!-- Instant theme initialization to prevent flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var isDark =
+            saved === 'dark' ||
+            (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index.js"></script>
+  </head>
+  <body class="bg-paper-50 dark:bg-paper-950 text-paper-900 dark:text-stone-100 antialiased min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>

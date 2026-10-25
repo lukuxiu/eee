@@ -1,0 +1,2347 @@
+{
+  "timestamp": "2026-10-25 22:38:48",
+  "total1199": 1199,
+  "missingAddedTotal": 141,
+  "addedToE1": 135,
+  "addedToE2": 132,
+  "e1TotalWords": 3398,
+  "e2TotalWords": 3004,
+  "sampleSupplemented": [
+    {
+      "word": "would",
+      "phonetic": "/wʊd/",
+      "rank": 1,
+      "totalFreq": 304,
+      "cefr": "C1",
+      "senses": [
+        {
+          "id": "would-s1",
+          "num": 1,
+          "pos": "aux.",
+          "definition": "（will 的过去式）将要，会； （表示假设或虚拟）会，将； （表示礼貌的请求或建议）能否，可以； （表示过去的习惯）总是，常常； （表示意愿或偏好）想要，愿意； （表示推测或看法）大概，可能",
+          "freq": 304,
+          "examples": [
+            {
+              "sentence": "Persuading studios to film here would become much more challenging if we couldn't offer a deep bench of local film workers, on-screen talent and local businesses that support the entertainment industry.",
+              "translation": "如果我们无法提供由本地影视从业人员、出镜人才以及支持娱乐产业的本地企业构成的深厚人才储备，那么说服制片厂来此拍摄将会变得更加困难。",
+              "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第2句",
+              "year": 2026,
+              "examType": "英语一",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第6段，第2句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "Transport economist Andrea Giuricin said the planned investments would bring improvements but disruptions in the meantime were inevitable.",
+              "translation": "交通经济学家安德烈亚·朱里钦表示，计划中的投资将带来改善，但在此期间，交通中断将不可避免。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第5段，第2句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第5段，第2句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "The Silver Room Block Party, staged by Hyde Park community leader Eric Williams, announced it would not return in 2024.",
+              "translation": "由海德公园社区领袖埃里克·威廉姆斯（Eric Williams）发起的银色房间街头派对（Silver Room Block Party）宣布，该活动将不会在2024年回归。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第1段，第2句",
+              "isAuthentic": true
+            }
+          ]
+        }
+      ],
+      "belongs_e1": true,
+      "belongs_e2": true,
+      "sentences_e1": [
+        {
+          "sentence": "Persuading studios to film here would become much more challenging if we couldn't offer a deep bench of local film workers, on-screen talent and local businesses that support the entertainment industry.",
+          "translation": "如果我们无法提供由本地影视从业人员、出镜人才以及支持娱乐产业的本地企业构成的深厚人才储备，那么说服制片厂来此拍摄将会变得更加困难。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "I loved the man from the Thirties research who found that wireless suddenly offered \"a lot of variety…things I thought I 'd never be interested in…ice hockey perhaps\".",
+          "translation": "我很喜欢那项三十年代研究中的那位受访者，他发现广播突然间提供了“极其丰富的内容……那些我原以为自己永远不会感兴趣的东西……比如冰球”。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The NAFSN sites experienced less than a quarter of the number of fires that would have been expected without fire suppression.",
+          "translation": "NAFSN 站点的火灾发生数量不到在没有灭火措施情况下预期火灾数量的四分之一。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Sir John Reith said that it would end \"isolation of the spirit\" and rejoiced: \"It does not matter how many thousands may be listening, there is always enough for others…the genius and the fool, the wealthy and the poor listen simultaneously.\"",
+          "translation": "约翰·里思爵士曾表示，这将终结“精神上的孤立”，并欣喜地说道：“无论成千上万的人如何倾听，总是能惠及他人……天才与愚夫、富人与穷人都在同一时刻倾听。”",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They also \"appear to be more comfortable writing in role … while [control] pupils imagine how they themselves would react to being shipwrecked, [target] children put themselves in the shoes of a literary character and express that character's emotion\".",
+          "translation": "他们也'似乎更擅长角色扮演式写作……当[对照组]学生想象自己遭遇海难会如何反应时，[目标组]儿童则会代入文学角色，表达该角色的情感'。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "For example, a busy street might not suit a motion-sensored door, as it would constantly be opening for passers-by.",
+          "translation": "例如，繁忙的街道可能不适合安装运动感应门，因为它会不断为路人自动开启。",
+          "source": "2024 · 英语一 · 完形填空（四选一） · 文章原文 · 第4段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A pressure-sensitive mat would be more appropriate to limit the surveyed area.",
+          "translation": "使用压敏垫会更合适，因其可限制感应区域。",
+          "source": "2024 · 英语一 · 完形填空（四选一） · 文章原文 · 第4段，第4句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "One possibility was that they merely used their eyes and tried out the plants they found, but that would probably result in a lot of wasted time and energy, not least because their eyesight is actually not very good.",
+          "translation": "一种可能性是它们仅仅依靠视觉来尝试所发现的植物，但这很可能会浪费大量时间和精力，尤其是因为它们的视力实际上并不好。",
+          "source": "2024 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第4段，第2句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "As Roma Agrawal explains in her new delightful book Nuts and Bolts, early 17th-century Virginians would sometimes burn down their homes if they were planning to relocate.",
+          "translation": "正如罗玛·阿格拉瓦尔在她令人愉悦的新书《螺母与螺栓》中所解释的那样，17世纪早期的弗吉尼亚人在计划搬家时，有时会烧毁自己的房屋。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Later civilisations would value the skilled blacksmith's labour in a nail even more than the raw material.",
+          "translation": "后世文明更看重钉子中蕴含的铁匠精湛技艺，而非其原材料本身。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It would be absurd to try to track the changing price of sports cars since 1695, but to ask the same question of nails makes perfect sense.",
+          "translation": "试图追踪1695年以来跑车价格的变化会显得荒谬可笑，但对钉子提出同样的问题却完全合情合理。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Romans buried the nails so deep that they would not be discovered for almost two millennia.",
+          "translation": "罗马人将这些钉子埋得如此之深，以至于将近两千年的时间里都未被人发现。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Gutenberg printing press transformed civilisation not by changing the nature of writing but by changing its cost—and it would have achieved little without a parallel collapse in the price of surfaces to write on, thanks to an often-overlooked technology called paper.",
+          "translation": "古腾堡印刷机改变了文明，并非通过改变书写的本质，而是通过改变其成本——如果没有另一种常被忽视的技术（即纸张）导致书写载体价格的同步暴跌，印刷机也难以取得多大成就。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And so we would call on state lawmakers from Richmond to Albany to consider reviewing their own wetlands protections and see for themselves the enormous stakes involved.",
+          "translation": "因此，我们呼吁从里士满到奥尔巴尼的各州立法者考虑审查各自的湿地保护措施，并亲自了解其中涉及的重大利害关系。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        }
+      ],
+      "sentences_e2": [
+        {
+          "sentence": "Transport economist Andrea Giuricin said the planned investments would bring improvements but disruptions in the meantime were inevitable.",
+          "translation": "交通经济学家安德烈亚·朱里钦表示，计划中的投资将带来改善，但在此期间，交通中断将不可避免。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Silver Room Block Party, staged by Hyde Park community leader Eric Williams, announced it would not return in 2024.",
+          "translation": "由海德公园社区领袖埃里克·威廉姆斯（Eric Williams）发起的银色房间街头派对（Silver Room Block Party）宣布，该活动将不会在2024年回归。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Ask people about public libraries and a certain image springs to mind: dusty, old-fashioned, the sort of place you enjoyed as a child but, rather like a British seaside town, would you go there now?",
+          "translation": "问起人们对公共图书馆的看法，脑海中总会浮现出某种特定画面：尘土飞扬、陈旧过时。就像那种你小时候很喜欢，但现在是否还会光顾的地方——某种程度上，就和英国的海滨小镇一样。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第1句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"But if you ask a farmer in Brazil if he or she is concerned about climate change, they would say, 'No, I am concerned about water,'\" he says.",
+          "translation": "他说：“但如果你问巴西的农民是否担心气候变化，他们会说，‘不，我担心的是水。’”",
+          "source": "2026 · 英语二 · 多项对应（信息匹配） · 文章原文 · 第6段，第3句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "多项对应（信息匹配）",
+          "questionNum": "文章原文 · 第6段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Perhaps most encouraging of all is a paper from 2022 by researchers at Stanford University that involved a mix of contrived help-seeking interactions and asking people to recall times they 'd sought help in the past.",
+          "translation": "或许最令人鼓舞的是斯坦福大学研究人员2022年发表的一篇论文，该研究结合了人为设计的求助互动实验和要求人们回忆过去求助经历的调查。",
+          "source": "2025 · 英语二 · 完形填空（四选一） · 文章原文 · 第4段，第1句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第1句",
+          "isAuthentic": true
+        }
+      ],
+      "all_sentences": [
+        {
+          "sentence": "Persuading studios to film here would become much more challenging if we couldn't offer a deep bench of local film workers, on-screen talent and local businesses that support the entertainment industry.",
+          "translation": "如果我们无法提供由本地影视从业人员、出镜人才以及支持娱乐产业的本地企业构成的深厚人才储备，那么说服制片厂来此拍摄将会变得更加困难。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Transport economist Andrea Giuricin said the planned investments would bring improvements but disruptions in the meantime were inevitable.",
+          "translation": "交通经济学家安德烈亚·朱里钦表示，计划中的投资将带来改善，但在此期间，交通中断将不可避免。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Silver Room Block Party, staged by Hyde Park community leader Eric Williams, announced it would not return in 2024.",
+          "translation": "由海德公园社区领袖埃里克·威廉姆斯（Eric Williams）发起的银色房间街头派对（Silver Room Block Party）宣布，该活动将不会在2024年回归。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Ask people about public libraries and a certain image springs to mind: dusty, old-fashioned, the sort of place you enjoyed as a child but, rather like a British seaside town, would you go there now?",
+          "translation": "问起人们对公共图书馆的看法，脑海中总会浮现出某种特定画面：尘土飞扬、陈旧过时。就像那种你小时候很喜欢，但现在是否还会光顾的地方——某种程度上，就和英国的海滨小镇一样。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第1句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"But if you ask a farmer in Brazil if he or she is concerned about climate change, they would say, 'No, I am concerned about water,'\" he says.",
+          "translation": "他说：“但如果你问巴西的农民是否担心气候变化，他们会说，‘不，我担心的是水。’”",
+          "source": "2026 · 英语二 · 多项对应（信息匹配） · 文章原文 · 第6段，第3句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "多项对应（信息匹配）",
+          "questionNum": "文章原文 · 第6段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "I loved the man from the Thirties research who found that wireless suddenly offered \"a lot of variety…things I thought I 'd never be interested in…ice hockey perhaps\".",
+          "translation": "我很喜欢那项三十年代研究中的那位受访者，他发现广播突然间提供了“极其丰富的内容……那些我原以为自己永远不会感兴趣的东西……比如冰球”。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The NAFSN sites experienced less than a quarter of the number of fires that would have been expected without fire suppression.",
+          "translation": "NAFSN 站点的火灾发生数量不到在没有灭火措施情况下预期火灾数量的四分之一。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Sir John Reith said that it would end \"isolation of the spirit\" and rejoiced: \"It does not matter how many thousands may be listening, there is always enough for others…the genius and the fool, the wealthy and the poor listen simultaneously.\"",
+          "translation": "约翰·里思爵士曾表示，这将终结“精神上的孤立”，并欣喜地说道：“无论成千上万的人如何倾听，总是能惠及他人……天才与愚夫、富人与穷人都在同一时刻倾听。”",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They also \"appear to be more comfortable writing in role … while [control] pupils imagine how they themselves would react to being shipwrecked, [target] children put themselves in the shoes of a literary character and express that character's emotion\".",
+          "translation": "他们也'似乎更擅长角色扮演式写作……当[对照组]学生想象自己遭遇海难会如何反应时，[目标组]儿童则会代入文学角色，表达该角色的情感'。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Perhaps most encouraging of all is a paper from 2022 by researchers at Stanford University that involved a mix of contrived help-seeking interactions and asking people to recall times they 'd sought help in the past.",
+          "translation": "或许最令人鼓舞的是斯坦福大学研究人员2022年发表的一篇论文，该研究结合了人为设计的求助互动实验和要求人们回忆过去求助经历的调查。",
+          "source": "2025 · 英语二 · 完形填空（四选一） · 文章原文 · 第4段，第1句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "For example, a busy street might not suit a motion-sensored door, as it would constantly be opening for passers-by.",
+          "translation": "例如，繁忙的街道可能不适合安装运动感应门，因为它会不断为路人自动开启。",
+          "source": "2024 · 英语一 · 完形填空（四选一） · 文章原文 · 第4段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A pressure-sensitive mat would be more appropriate to limit the surveyed area.",
+          "translation": "使用压敏垫会更合适，因其可限制感应区域。",
+          "source": "2024 · 英语一 · 完形填空（四选一） · 文章原文 · 第4段，第4句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第4段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "One possibility was that they merely used their eyes and tried out the plants they found, but that would probably result in a lot of wasted time and energy, not least because their eyesight is actually not very good.",
+          "translation": "一种可能性是它们仅仅依靠视觉来尝试所发现的植物，但这很可能会浪费大量时间和精力，尤其是因为它们的视力实际上并不好。",
+          "source": "2024 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第4段，第2句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "As Roma Agrawal explains in her new delightful book Nuts and Bolts, early 17th-century Virginians would sometimes burn down their homes if they were planning to relocate.",
+          "translation": "正如罗玛·阿格拉瓦尔在她令人愉悦的新书《螺母与螺栓》中所解释的那样，17世纪早期的弗吉尼亚人在计划搬家时，有时会烧毁自己的房屋。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Later civilisations would value the skilled blacksmith's labour in a nail even more than the raw material.",
+          "translation": "后世文明更看重钉子中蕴含的铁匠精湛技艺，而非其原材料本身。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It would be absurd to try to track the changing price of sports cars since 1695, but to ask the same question of nails makes perfect sense.",
+          "translation": "试图追踪1695年以来跑车价格的变化会显得荒谬可笑，但对钉子提出同样的问题却完全合情合理。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Romans buried the nails so deep that they would not be discovered for almost two millennia.",
+          "translation": "罗马人将这些钉子埋得如此之深，以至于将近两千年的时间里都未被人发现。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The Gutenberg printing press transformed civilisation not by changing the nature of writing but by changing its cost—and it would have achieved little without a parallel collapse in the price of surfaces to write on, thanks to an often-overlooked technology called paper.",
+          "translation": "古腾堡印刷机改变了文明，并非通过改变书写的本质，而是通过改变其成本——如果没有另一种常被忽视的技术（即纸张）导致书写载体价格的同步暴跌，印刷机也难以取得多大成就。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And so we would call on state lawmakers from Richmond to Albany to consider reviewing their own wetlands protections and see for themselves the enormous stakes involved.",
+          "translation": "因此，我们呼吁从里士满到奥尔巴尼的各州立法者考虑审查各自的湿地保护措施，并亲自了解其中涉及的重大利害关系。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        }
+      ]
+    },
+    {
+      "word": "author",
+      "phonetic": "/ˈɔθər/",
+      "rank": 2,
+      "totalFreq": 209,
+      "cefr": "C1",
+      "senses": [
+        {
+          "id": "author-s1",
+          "num": 1,
+          "pos": "n.",
+          "definition": "作者；作家； 创始人；发起者",
+          "freq": 209,
+          "examples": [
+            {
+              "sentence": "Not only does understanding the equines' genetic makeup help reveal their contribution to human history, but it also might improve their management in the future, as climate change alters the planet's environment, write the authors .",
+              "translation": "作者写道，了解马科动物的基因构成不仅有助于揭示它们对人类历史的贡献，而且随着气候变化改变地球环境，这还可能改善未来对它们的管理。",
+              "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+              "year": 2026,
+              "examType": "英语一",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第6段，第1句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "What was the author commissioned to do about English public libraries?",
+              "translation": "作者被委派就英国公共图书馆开展什么工作？",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第21题题干",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "题干 · 第21题题干",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "A children's author and poet who had become a keen amateur photographer, Peters watched the butterflies and idly wondered if he could capture them in flight.",
+              "translation": "彼得斯是一位儿童文学作家兼诗人，同时也是一位热忱的业余摄影师。他观察着蝴蝶，随意地想着能否捕捉到它们飞行的瞬间。",
+              "source": "2025 · 英语一 · 段落排序 · 文章原文 · G段，第1句",
+              "year": 2025,
+              "examType": "英语一",
+              "section": "段落排序",
+              "questionNum": "文章原文 · G段，第1句",
+              "isAuthentic": true
+            }
+          ]
+        },
+        {
+          "id": "author-s2",
+          "num": 2,
+          "pos": "v.",
+          "definition": "撰写；创作",
+          "freq": 209,
+          "examples": []
+        }
+      ],
+      "belongs_e1": true,
+      "belongs_e2": true,
+      "sentences_e1": [
+        {
+          "sentence": "Not only does understanding the equines' genetic makeup help reveal their contribution to human history, but it also might improve their management in the future, as climate change alters the planet's environment, write the authors .",
+          "translation": "作者写道，了解马科动物的基因构成不仅有助于揭示它们对人类历史的贡献，而且随着气候变化改变地球环境，这还可能改善未来对它们的管理。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A children's author and poet who had become a keen amateur photographer, Peters watched the butterflies and idly wondered if he could capture them in flight.",
+          "translation": "彼得斯是一位儿童文学作家兼诗人，同时也是一位热忱的业余摄影师。他观察着蝴蝶，随意地想着能否捕捉到它们飞行的瞬间。",
+          "source": "2025 · 英语一 · 段落排序 · 文章原文 · G段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · G段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following statements would the author agree with?",
+          "translation": "作者会同意以下哪种说法？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "How does the author feel about the future of the Chesapeake Bay?",
+          "translation": "作者对切萨皮克湾的未来持何种看法？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第38题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第38题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The publishing industry talks about diversity in terms of authors and staff but it also needs a plurality of ways of delivering intellectual contact, choice and different voices.",
+          "translation": "出版业在谈论作者和员工的多样性，但它也需要多种方式来实现知识交流、提供选择和展现不同声音。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "What should an author do to deal with citation manipulators?",
+          "translation": "作者应如何应对引用操纵者？",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In one example, an individual—acting as author , editor, and consultant—was able to use at least 15 journals as citation providers to articles published by five scientists at three universities.",
+          "translation": "举个例子，有个人身兼作者、编辑和顾问三职，竟然能利用至少15家期刊为三所大学的五位科学家发表的文章提供引用。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And for authors who wish to steer clear of citation cartel activities: when an editor, a reviewer, or a support service asks you to add inappropriate references, do not oblige and do report the request to the journal.",
+          "translation": "对于希望避开引用操纵集团活动的作者而言：当编辑、审稿人或支持服务机构要求您添加不恰当的参考文献时，请勿照办，并务必向期刊报告这一请求。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第3句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The advent of electronic publishing and authors' need to find outlets for their papers resulted in thousands of new journals.",
+          "translation": "电子出版的出现以及作者为其论文寻找发表渠道的需求，催生了数千种新期刊。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Recently, another expression of this predatory behavior has emerged: so-called support service consultancies that provide language and other editorial support to individual authors and to journals sometimes advise contributors to add a number of citations to their articles.",
+          "translation": "最近，这种掠夺性行为又出现了新的表现形式：所谓的支持服务咨询公司，它们为作者个人和期刊提供语言及其他编辑支持，有时会建议投稿人在其文章中添加大量引文。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In 2016, researchers developed an algorithm to recognize suspicious citation patterns, including groups of authors that disproportionately cite one another and groups of journals that cite each other frequently to increase the impact factors of their publications.",
+          "translation": "2016年，研究人员开发了一种算法来识别可疑的引用模式，包括作者群体间不成比例地相互引用，以及期刊群体间频繁相互引用以提高其出版物影响因子的行为。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Citation cartels, where journals, authors , and institutions conspire to inflate citation numbers, have existed for a long time.",
+          "translation": "引文卡特尔（即期刊、作者和机构合谋抬高引文数量的行为）由来已久。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"I don't believe that the legal protection would have happened in the time frame that it did without those images,\" says Heather Hansen, journalist and author of Prophets and Moguls, Rangers and Rogues, Bison and Bears: 100 Years of the National Park Service.",
+          "translation": "记者兼《先知与大亨、护林员与流浪者、野牛与熊：国家公园管理局百年史》一书作者希瑟·汉森表示：“我认为，如果没有这些影像资料，黄石公园的法律保护不会在当时那个时间框架内实现。”",
+          "source": "2023 · 英语一 · 段落排序 · 文章原文 · G段，第5句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · G段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Waterstones staff hesitate to promote big-name authors ' books.",
+          "translation": "水石书店员工不愿推广知名作家的书籍。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 选项 · 第34题，C",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "选项 · 第34题，C",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It comes at a time when authors are already worried about the consequences of the proposed merger between PRH and another big publisher, Simon & Schuster—the reduction in the number of unaligned UK publishers is likely to lead to fewer bidding wars, lower advances, and more conformity in terms of what is published.",
+          "translation": "这一切发生之际，作者们本已在担忧企鹅兰登书屋与另一家大型出版商西蒙与舒斯特出版社拟议合并可能带来的后果——英国独立出版商数量的减少可能会导致竞价竞争减少、预付款降低，以及出版内容更趋同质化。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Big-name PRH authors may suffer a bit, but it's those mid-list authors , who normally rely on Waterstones staff's passion for promoting books by lesser-known writers, who will be praying for an end to the dispute.",
+          "translation": "企鹅兰登书屋的知名作家可能会受到些许影响，但真正盼望这场争端结束的，是那些中游作家——他们通常依赖水石书店员工对推广小众作家作品的热情。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In the meantime, PRH authors have been the losers.",
+          "translation": "与此同时，企鹅兰登书屋的作者们成了这场争端的受害者。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第1句",
+          "isAuthentic": true
+        }
+      ],
+      "sentences_e2": [
+        {
+          "sentence": "What was the author commissioned to do about English public libraries?",
+          "translation": "作者被委派就英国公共图书馆开展什么工作？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第21题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第21题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "What does the author imply about existing health privacy law?",
+          "translation": "作者对现有健康隐私法暗示了什么？",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 题干 · 第37题题干",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第37题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"This isn't something you can do overnight,\" says Keri L. Denay, MD, lead author of a recent American College of Sports Medicine advisory that encourages Americans to not overlook the benefits of activity during the pandemic.",
+          "translation": "医学博士凯里·L·德奈表示：“这不是一蹴而就的事情。”她是美国运动医学会近期发布的一份指南的主要作者，该指南鼓励美国人在疫情期间不要忽视运动的益处。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第3段，第4句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        }
+      ],
+      "all_sentences": [
+        {
+          "sentence": "Not only does understanding the equines' genetic makeup help reveal their contribution to human history, but it also might improve their management in the future, as climate change alters the planet's environment, write the authors .",
+          "translation": "作者写道，了解马科动物的基因构成不仅有助于揭示它们对人类历史的贡献，而且随着气候变化改变地球环境，这还可能改善未来对它们的管理。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "What was the author commissioned to do about English public libraries?",
+          "translation": "作者被委派就英国公共图书馆开展什么工作？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第21题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第21题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A children's author and poet who had become a keen amateur photographer, Peters watched the butterflies and idly wondered if he could capture them in flight.",
+          "translation": "彼得斯是一位儿童文学作家兼诗人，同时也是一位热忱的业余摄影师。他观察着蝴蝶，随意地想着能否捕捉到它们飞行的瞬间。",
+          "source": "2025 · 英语一 · 段落排序 · 文章原文 · G段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · G段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following statements would the author agree with?",
+          "translation": "作者会同意以下哪种说法？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "How does the author feel about the future of the Chesapeake Bay?",
+          "translation": "作者对切萨皮克湾的未来持何种看法？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第38题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第38题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "What does the author imply about existing health privacy law?",
+          "translation": "作者对现有健康隐私法暗示了什么？",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 题干 · 第37题题干",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第37题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The publishing industry talks about diversity in terms of authors and staff but it also needs a plurality of ways of delivering intellectual contact, choice and different voices.",
+          "translation": "出版业在谈论作者和员工的多样性，但它也需要多种方式来实现知识交流、提供选择和展现不同声音。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "What should an author do to deal with citation manipulators?",
+          "translation": "作者应如何应对引用操纵者？",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In one example, an individual—acting as author , editor, and consultant—was able to use at least 15 journals as citation providers to articles published by five scientists at three universities.",
+          "translation": "举个例子，有个人身兼作者、编辑和顾问三职，竟然能利用至少15家期刊为三所大学的五位科学家发表的文章提供引用。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And for authors who wish to steer clear of citation cartel activities: when an editor, a reviewer, or a support service asks you to add inappropriate references, do not oblige and do report the request to the journal.",
+          "translation": "对于希望避开引用操纵集团活动的作者而言：当编辑、审稿人或支持服务机构要求您添加不恰当的参考文献时，请勿照办，并务必向期刊报告这一请求。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第3句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The advent of electronic publishing and authors' need to find outlets for their papers resulted in thousands of new journals.",
+          "translation": "电子出版的出现以及作者为其论文寻找发表渠道的需求，催生了数千种新期刊。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Recently, another expression of this predatory behavior has emerged: so-called support service consultancies that provide language and other editorial support to individual authors and to journals sometimes advise contributors to add a number of citations to their articles.",
+          "translation": "最近，这种掠夺性行为又出现了新的表现形式：所谓的支持服务咨询公司，它们为作者个人和期刊提供语言及其他编辑支持，有时会建议投稿人在其文章中添加大量引文。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In 2016, researchers developed an algorithm to recognize suspicious citation patterns, including groups of authors that disproportionately cite one another and groups of journals that cite each other frequently to increase the impact factors of their publications.",
+          "translation": "2016年，研究人员开发了一种算法来识别可疑的引用模式，包括作者群体间不成比例地相互引用，以及期刊群体间频繁相互引用以提高其出版物影响因子的行为。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Citation cartels, where journals, authors , and institutions conspire to inflate citation numbers, have existed for a long time.",
+          "translation": "引文卡特尔（即期刊、作者和机构合谋抬高引文数量的行为）由来已久。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"I don't believe that the legal protection would have happened in the time frame that it did without those images,\" says Heather Hansen, journalist and author of Prophets and Moguls, Rangers and Rogues, Bison and Bears: 100 Years of the National Park Service.",
+          "translation": "记者兼《先知与大亨、护林员与流浪者、野牛与熊：国家公园管理局百年史》一书作者希瑟·汉森表示：“我认为，如果没有这些影像资料，黄石公园的法律保护不会在当时那个时间框架内实现。”",
+          "source": "2023 · 英语一 · 段落排序 · 文章原文 · G段，第5句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · G段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Waterstones staff hesitate to promote big-name authors ' books.",
+          "translation": "水石书店员工不愿推广知名作家的书籍。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 选项 · 第34题，C",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "选项 · 第34题，C",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It comes at a time when authors are already worried about the consequences of the proposed merger between PRH and another big publisher, Simon & Schuster—the reduction in the number of unaligned UK publishers is likely to lead to fewer bidding wars, lower advances, and more conformity in terms of what is published.",
+          "translation": "这一切发生之际，作者们本已在担忧企鹅兰登书屋与另一家大型出版商西蒙与舒斯特出版社拟议合并可能带来的后果——英国独立出版商数量的减少可能会导致竞价竞争减少、预付款降低，以及出版内容更趋同质化。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Big-name PRH authors may suffer a bit, but it's those mid-list authors , who normally rely on Waterstones staff's passion for promoting books by lesser-known writers, who will be praying for an end to the dispute.",
+          "translation": "企鹅兰登书屋的知名作家可能会受到些许影响，但真正盼望这场争端结束的，是那些中游作家——他们通常依赖水石书店员工对推广小众作家作品的热情。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In the meantime, PRH authors have been the losers.",
+          "translation": "与此同时，企鹅兰登书屋的作者们成了这场争端的受害者。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第4段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第4段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"This isn't something you can do overnight,\" says Keri L. Denay, MD, lead author of a recent American College of Sports Medicine advisory that encourages Americans to not overlook the benefits of activity during the pandemic.",
+          "translation": "医学博士凯里·L·德奈表示：“这不是一蹴而就的事情。”她是美国运动医学会近期发布的一份指南的主要作者，该指南鼓励美国人在疫情期间不要忽视运动的益处。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第3段，第4句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        }
+      ]
+    },
+    {
+      "word": "less",
+      "phonetic": "/lɛs/",
+      "rank": 4,
+      "totalFreq": 150,
+      "cefr": "C1",
+      "senses": [
+        {
+          "id": "less-s1",
+          "num": 1,
+          "pos": "det.",
+          "definition": "较少的；更少的（修饰不可数名词）",
+          "freq": 150,
+          "examples": [
+            {
+              "sentence": "When you find yourself taking a situation personally, try to think of other interpretations that are less focused on you — especially in the sense of saying anything deep or fundamental about you.",
+              "translation": "当你发现自己对某种情况过于敏感、认为是在针对自己时，试着去寻找其他不那么以你为中心的解释——特别是要意识到，这件事并不代表对你个人深度或本质上的定性。",
+              "source": "2026 · 英语二 · 完形填空（四选一） · 文章原文 · 第5段，第2句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "完形填空（四选一）",
+              "questionNum": "文章原文 · 第5段，第2句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+              "translation": "我们的数据表明，像这样与人工智能互动，可以让我们感到被倾听，并减少孤独感。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第1段，第2句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "Research shows that these prescribed burns make subsequent wildfires less severe, even if later fires happen under the most dangerous weather conditions.",
+              "translation": "研究表明，这种计划烧除可以降低后续野火的严重程度，即使火灾发生在最危险的天气条件下也是如此。",
+              "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第4句",
+              "year": 2026,
+              "examType": "英语一",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第5段，第4句",
+              "isAuthentic": true
+            }
+          ]
+        },
+        {
+          "id": "less-s2",
+          "num": 2,
+          "pos": "adv.",
+          "definition": "较少地；更少地；不如",
+          "freq": 150,
+          "examples": []
+        },
+        {
+          "id": "less-s3",
+          "num": 3,
+          "pos": "pron.",
+          "definition": "较少的量；更少的东西",
+          "freq": 150,
+          "examples": []
+        },
+        {
+          "id": "less-s4",
+          "num": 4,
+          "pos": "prep.",
+          "definition": "减去；扣除",
+          "freq": 150,
+          "examples": []
+        },
+        {
+          "id": "less-s5",
+          "num": 5,
+          "pos": "n.",
+          "definition": "较少的事物；次要的东西",
+          "freq": 150,
+          "examples": []
+        }
+      ],
+      "belongs_e1": true,
+      "belongs_e2": true,
+      "sentences_e1": [
+        {
+          "sentence": "Research shows that these prescribed burns make subsequent wildfires less severe, even if later fires happen under the most dangerous weather conditions.",
+          "translation": "研究表明，这种计划烧除可以降低后续野火的严重程度，即使火灾发生在最危险的天气条件下也是如此。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The NAFSN sites experienced less than a quarter of the number of fires that would have been expected without fire suppression.",
+          "translation": "NAFSN 站点的火灾发生数量不到在没有灭火措施情况下预期火灾数量的四分之一。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A woman says there have been fewer street fights since the arrival of the wireless but also less stopping and \"talking on the brush handle\".",
+          "translation": "一位女性表示，自无线电广播出现以来，街头斗殴变少了，但停下来“倚着扫帚把聊天”的情况也随之减少了。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A return to that version of scientific literacy, which focused more on teaching what science is and how it works and less on memorizing scientific facts, seems like something society today desperately needs.",
+          "translation": "回归到这种科学素养的版本，即更多地关注传授科学的本质及其运作方式，而非死记硬背科学事实，似乎正是当今社会迫切需要的。",
+          "source": "2026 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第2段，第3句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Librarians' selfless devotion can act against us when users point to universality of access by holding up a cell phone and saying, \"it's all in here\" as evidence that libraries are less vital for researchers today.",
+          "translation": "当用户举起手机说“所有信息都在这里面”，以此证明图书馆对当今研究人员不再那么重要时，图书馆员无私奉献的精神反而可能对我们不利。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "These take-off shots are even more challenging because they require a wide-angle lens, which means he must be less than 2cm from the butterfly.",
+          "translation": "这些起飞瞬间的拍摄更具挑战性，因为需要使用广角镜头，这意味着他必须距离蝴蝶不到2厘米。",
+          "source": "2025 · 英语一 · 段落排序 · 文章原文 · A段，第3句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · A段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "According to Dr. Nikhil Chaudhary, an evolutionary anthropologist at Cambridge University, these practices, known as alloparenting, could lead to less anxiety for children and parents.",
+          "translation": "剑桥大学进化人类学家尼克希尔·乔杜里博士表示，这些被称为“异亲抚育”的做法可以减轻孩子和父母的焦虑。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Chaudhary said that parents now had less childcare support from family and social networks than during most of humans' evolutionary history, but introducing additional caregivers could reduce stress and maternal depression, which could have a \"knock-on\" benefit to a child's wellbeing.",
+          "translation": "乔杜里指出，与人类进化史的大部分时期相比，如今的父母从家庭和社交网络获得的育儿支持更少。但增加额外的照料者可以减轻压力和母亲抑郁，这可能对孩子的福祉产生'连锁'益处。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "All this was put at great risk late last month, when the U.S. Supreme Court issued a ruling in an Idaho case that provides the U.S. Environmental Protection Agency (EPA) far less authority to regulate wetlands and waterways.",
+          "translation": "然而，所有这一切在上个月末陷入了巨大的危机——美国最高法院就爱达荷州的一起案件作出裁决，大幅削弱了美国环境保护局(EPA)对湿地和水道的监管权。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It is also less prominent in many social studies courses.",
+          "translation": "它在许多社会研究课程中也不太突出。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And firms pay staff less because firms carry the burden of the employment arrangement going wrong.",
+          "translation": "而且企业会降低员工薪酬，因为企业要承担雇佣安排出现问题时的风险。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第4句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "To pressure zoos to spend less on their animals would lead to inhumane outcomes for the precious creatures in their care.",
+          "translation": "迫使动物园减少在动物身上的投入，将给那些受其照料的珍贵生灵带来不人道的后果。",
+          "source": "2022 · 英语一 · 段落小标题（7选5） · 选项 · 选项B",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "段落小标题（7选5）",
+          "questionNum": "选项 · 选项B",
+          "isAuthentic": true
+        }
+      ],
+      "sentences_e2": [
+        {
+          "sentence": "When you find yourself taking a situation personally, try to think of other interpretations that are less focused on you — especially in the sense of saying anything deep or fundamental about you.",
+          "translation": "当你发现自己对某种情况过于敏感、认为是在针对自己时，试着去寻找其他不那么以你为中心的解释——特别是要意识到，这件事并不代表对你个人深度或本质上的定性。",
+          "source": "2026 · 英语二 · 完形填空（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+          "translation": "我们的数据表明，像这样与人工智能互动，可以让我们感到被倾听，并减少孤独感。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And while you might fear coming across as incompetent, there's actually research that shows that advice-seekers are perceived as more competent, not less .",
+          "translation": "虽然你可能担心自己会显得无能，但实际上有研究表明，寻求建议的人往往被认为更有能力，而非相反。",
+          "source": "2025 · 英语二 · 完形填空（四选一） · 文章原文 · 第3段，第5句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And, as our research emphasizes, tipping now seems to be more coercive, less generous and often completely dissociated from service quality.",
+          "translation": "而且，正如我们的研究所强调的，如今的小费似乎更具强制性，少了些慷慨，并且往往与服务质量完全脱节。",
+          "source": "2025 · 英语二 · 阅读理解（四选一） · 文章原文 · 第7段，第3句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "U.S. customers historically tipped people they assumed were earning most of their income via tips, such as restaurant servers earning less than the minimum wage.",
+          "translation": "美国顾客历来会给那些他们认为主要靠小费收入的人小费，比如收入低于最低工资的餐厅服务员。",
+          "source": "2025 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第1句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "But you will reap benefits such as less anxiety and improve sleep right away.",
+          "translation": "但你会立即收获诸多益处，比如焦虑减轻和睡眠改善。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第3段，第5句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They chose this particular behavior for three reasons, according to study co-author Eric Schwitzgebel, a philosopher at the University of California, Riverside: students' attitudes on the topic are variable and unstable, behavior is easily measurable, and ethics literature largely agrees that eating less meat is good because it reduces environmental harm and animal suffering.",
+          "translation": "该研究的合著者、加州大学河滨分校哲学家埃里克·施维茨格贝尔表示，他们选择这一特定行为有三个原因：学生对这一话题的态度多变且不稳定；行为易于测量；伦理学文献普遍认为少吃肉有益，因为这能减少环境危害和动物痛苦。",
+          "source": "2022 · 英语二 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "There'll probably have to be less socialising with your friends and less time with your family.",
+          "translation": "你可能不得不减少与朋友的社交活动，也减少与家人相处的时间。",
+          "source": "2022 · 英语二 · 完形填空（四选一） · 文章原文 · 第3段，第6句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第3段，第6句",
+          "isAuthentic": true
+        }
+      ],
+      "all_sentences": [
+        {
+          "sentence": "When you find yourself taking a situation personally, try to think of other interpretations that are less focused on you — especially in the sense of saying anything deep or fundamental about you.",
+          "translation": "当你发现自己对某种情况过于敏感、认为是在针对自己时，试着去寻找其他不那么以你为中心的解释——特别是要意识到，这件事并不代表对你个人深度或本质上的定性。",
+          "source": "2026 · 英语二 · 完形填空（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+          "translation": "我们的数据表明，像这样与人工智能互动，可以让我们感到被倾听，并减少孤独感。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Research shows that these prescribed burns make subsequent wildfires less severe, even if later fires happen under the most dangerous weather conditions.",
+          "translation": "研究表明，这种计划烧除可以降低后续野火的严重程度，即使火灾发生在最危险的天气条件下也是如此。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The NAFSN sites experienced less than a quarter of the number of fires that would have been expected without fire suppression.",
+          "translation": "NAFSN 站点的火灾发生数量不到在没有灭火措施情况下预期火灾数量的四分之一。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A woman says there have been fewer street fights since the arrival of the wireless but also less stopping and \"talking on the brush handle\".",
+          "translation": "一位女性表示，自无线电广播出现以来，街头斗殴变少了，但停下来“倚着扫帚把聊天”的情况也随之减少了。",
+          "source": "2026 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "A return to that version of scientific literacy, which focused more on teaching what science is and how it works and less on memorizing scientific facts, seems like something society today desperately needs.",
+          "translation": "回归到这种科学素养的版本，即更多地关注传授科学的本质及其运作方式，而非死记硬背科学事实，似乎正是当今社会迫切需要的。",
+          "source": "2026 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第2段，第3句",
+          "year": 2026,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Librarians' selfless devotion can act against us when users point to universality of access by holding up a cell phone and saying, \"it's all in here\" as evidence that libraries are less vital for researchers today.",
+          "translation": "当用户举起手机说“所有信息都在这里面”，以此证明图书馆对当今研究人员不再那么重要时，图书馆员无私奉献的精神反而可能对我们不利。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "These take-off shots are even more challenging because they require a wide-angle lens, which means he must be less than 2cm from the butterfly.",
+          "translation": "这些起飞瞬间的拍摄更具挑战性，因为需要使用广角镜头，这意味着他必须距离蝴蝶不到2厘米。",
+          "source": "2025 · 英语一 · 段落排序 · 文章原文 · A段，第3句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "段落排序",
+          "questionNum": "文章原文 · A段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And while you might fear coming across as incompetent, there's actually research that shows that advice-seekers are perceived as more competent, not less .",
+          "translation": "虽然你可能担心自己会显得无能，但实际上有研究表明，寻求建议的人往往被认为更有能力，而非相反。",
+          "source": "2025 · 英语二 · 完形填空（四选一） · 文章原文 · 第3段，第5句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And, as our research emphasizes, tipping now seems to be more coercive, less generous and often completely dissociated from service quality.",
+          "translation": "而且，正如我们的研究所强调的，如今的小费似乎更具强制性，少了些慷慨，并且往往与服务质量完全脱节。",
+          "source": "2025 · 英语二 · 阅读理解（四选一） · 文章原文 · 第7段，第3句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "U.S. customers historically tipped people they assumed were earning most of their income via tips, such as restaurant servers earning less than the minimum wage.",
+          "translation": "美国顾客历来会给那些他们认为主要靠小费收入的人小费，比如收入低于最低工资的餐厅服务员。",
+          "source": "2025 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第1句",
+          "year": 2025,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "According to Dr. Nikhil Chaudhary, an evolutionary anthropologist at Cambridge University, these practices, known as alloparenting, could lead to less anxiety for children and parents.",
+          "translation": "剑桥大学进化人类学家尼克希尔·乔杜里博士表示，这些被称为“异亲抚育”的做法可以减轻孩子和父母的焦虑。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Chaudhary said that parents now had less childcare support from family and social networks than during most of humans' evolutionary history, but introducing additional caregivers could reduce stress and maternal depression, which could have a \"knock-on\" benefit to a child's wellbeing.",
+          "translation": "乔杜里指出，与人类进化史的大部分时期相比，如今的父母从家庭和社交网络获得的育儿支持更少。但增加额外的照料者可以减轻压力和母亲抑郁，这可能对孩子的福祉产生'连锁'益处。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "All this was put at great risk late last month, when the U.S. Supreme Court issued a ruling in an Idaho case that provides the U.S. Environmental Protection Agency (EPA) far less authority to regulate wetlands and waterways.",
+          "translation": "然而，所有这一切在上个月末陷入了巨大的危机——美国最高法院就爱达荷州的一起案件作出裁决，大幅削弱了美国环境保护局(EPA)对湿地和水道的监管权。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第1句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It is also less prominent in many social studies courses.",
+          "translation": "它在许多社会研究课程中也不太突出。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "But you will reap benefits such as less anxiety and improve sleep right away.",
+          "translation": "但你会立即收获诸多益处，比如焦虑减轻和睡眠改善。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第3段，第5句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They chose this particular behavior for three reasons, according to study co-author Eric Schwitzgebel, a philosopher at the University of California, Riverside: students' attitudes on the topic are variable and unstable, behavior is easily measurable, and ethics literature largely agrees that eating less meat is good because it reduces environmental harm and animal suffering.",
+          "translation": "该研究的合著者、加州大学河滨分校哲学家埃里克·施维茨格贝尔表示，他们选择这一特定行为有三个原因：学生对这一话题的态度多变且不稳定；行为易于测量；伦理学文献普遍认为少吃肉有益，因为这能减少环境危害和动物痛苦。",
+          "source": "2022 · 英语二 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And firms pay staff less because firms carry the burden of the employment arrangement going wrong.",
+          "translation": "而且企业会降低员工薪酬，因为企业要承担雇佣安排出现问题时的风险。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第4句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "To pressure zoos to spend less on their animals would lead to inhumane outcomes for the precious creatures in their care.",
+          "translation": "迫使动物园减少在动物身上的投入，将给那些受其照料的珍贵生灵带来不人道的后果。",
+          "source": "2022 · 英语一 · 段落小标题（7选5） · 选项 · 选项B",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "段落小标题（7选5）",
+          "questionNum": "选项 · 选项B",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "There'll probably have to be less socialising with your friends and less time with your family.",
+          "translation": "你可能不得不减少与朋友的社交活动，也减少与家人相处的时间。",
+          "source": "2022 · 英语二 · 完形填空（四选一） · 文章原文 · 第3段，第6句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第3段，第6句",
+          "isAuthentic": true
+        }
+      ]
+    },
+    {
+      "word": "following",
+      "phonetic": "/ˈfɑloʊɪŋ/",
+      "rank": 8,
+      "totalFreq": 91,
+      "cefr": "B2",
+      "senses": [
+        {
+          "id": "following-s1",
+          "num": 1,
+          "pos": "adj.",
+          "definition": "接下来的；其后的",
+          "freq": 91,
+          "examples": [
+            {
+              "sentence": "Which of the following is suggested for libraries in the last paragraph?",
+              "translation": "最后一段对图书馆提出了下列哪项建议？",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第25题题干",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "题干 · 第25题题干",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "Which of the following is one cause of the disruptions in the network?",
+              "translation": "下列哪项是导致网络中断的原因之一？",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第33题题干",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "题干 · 第33题题干",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "Which of the following statements best summarizes the text?",
+              "translation": "以下哪个陈述最能概括本文内容？",
+              "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+              "year": 2025,
+              "examType": "英语一",
+              "section": "阅读理解（四选一）",
+              "questionNum": "题干 · 第40题题干",
+              "isAuthentic": true
+            }
+          ]
+        },
+        {
+          "id": "following-s2",
+          "num": 2,
+          "pos": "n.",
+          "definition": "追随者；拥护者（集合名词）； 下述内容；以下各项",
+          "freq": 91,
+          "examples": []
+        },
+        {
+          "id": "following-s3",
+          "num": 3,
+          "pos": "prep.",
+          "definition": "在……之后（时间）",
+          "freq": 91,
+          "examples": []
+        }
+      ],
+      "belongs_e1": true,
+      "belongs_e2": true,
+      "sentences_e1": [
+        {
+          "sentence": "Which of the following statements best summarizes the text?",
+          "translation": "以下哪个陈述最能概括本文内容？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is emphasized in the text?",
+          "translation": "文中强调了下列哪一项？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第35题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第35题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following statements would the author agree with?",
+          "translation": "作者会同意以下哪种说法？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following best summarises the last two paragraphs?",
+          "translation": "以下哪项最能概括最后两段内容？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is true of New England?",
+          "translation": "关于新英格兰，以下哪项是正确的？",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 题干 · 第26题题干",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第26题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following measures would the Productivity Commission support?",
+          "translation": "以下哪项措施会得到生产力委员会的支持？",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 题干 · 第38题题干",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第38题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "However, the mechanisms proposed were unwieldy and the Bill was voted down following the change in government later that year.",
+          "translation": "然而，该法案提出的机制过于繁琐，并且在当年晚些时候政府更迭后被否决。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第8段，第3句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第8段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following might be the best title for this text?",
+          "translation": "以下哪项可能是本文的最佳标题？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following characterizes the scientific publishing model?",
+          "translation": "以下哪项是科学出版模式的特征？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following can be inferred from the text?",
+          "translation": "从文中可以推断出以下哪一项？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第35题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第35题题干",
+          "isAuthentic": true
+        }
+      ],
+      "sentences_e2": [
+        {
+          "sentence": "Which of the following is suggested for libraries in the last paragraph?",
+          "translation": "最后一段对图书馆提出了下列哪项建议？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is one cause of the disruptions in the network?",
+          "translation": "下列哪项是导致网络中断的原因之一？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第33题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第33题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following causes the shortage of wood supply in the UK?",
+          "translation": "以下哪项导致了英国木材供应短缺？",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 题干 · 第29题题干",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第29题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would Sparrow support about the Internet?",
+          "translation": "关于互联网，斯派罗会支持以下哪项观点？",
+          "source": "2023 · 英语二 · 阅读理解（四选一） · 题干 · 第33题题干",
+          "year": 2023,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第33题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The following simple strategies will help you return to exercise safely after a break.",
+          "translation": "以下简单策略将帮助你在中断锻炼后安全地恢复运动。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第1段，第4句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第1段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is a reason for the researchers to study meat eating?",
+          "translation": "研究人员选择研究肉食行为的原因是以下哪一项？",
+          "source": "2022 · 英语二 · 阅读理解（四选一） · 题干 · 第37题题干",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第37题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is true about Madrid's clean air zone?",
+          "translation": "关于马德里的清洁空气区，以下哪项是正确的？",
+          "source": "2020 · 英语二 · 阅读理解（四选一） · 题干 · 第31题题干",
+          "year": 2020,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第31题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following has contributed to CEO pay rise?",
+          "translation": "以下哪项促成了首席执行官薪酬的上涨？",
+          "source": "2020 · 英语二 · 阅读理解（四选一） · 题干 · 第26题题干",
+          "year": 2020,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第26题题干",
+          "isAuthentic": true
+        }
+      ],
+      "all_sentences": [
+        {
+          "sentence": "Which of the following is suggested for libraries in the last paragraph?",
+          "translation": "最后一段对图书馆提出了下列哪项建议？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is one cause of the disruptions in the network?",
+          "translation": "下列哪项是导致网络中断的原因之一？",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 题干 · 第33题题干",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第33题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following statements best summarizes the text?",
+          "translation": "以下哪个陈述最能概括本文内容？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is emphasized in the text?",
+          "translation": "文中强调了下列哪一项？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第35题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第35题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following statements would the author agree with?",
+          "translation": "作者会同意以下哪种说法？",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following best summarises the last two paragraphs?",
+          "translation": "以下哪项最能概括最后两段内容？",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following causes the shortage of wood supply in the UK?",
+          "translation": "以下哪项导致了英国木材供应短缺？",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 题干 · 第29题题干",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第29题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would Sparrow support about the Internet?",
+          "translation": "关于互联网，斯派罗会支持以下哪项观点？",
+          "source": "2023 · 英语二 · 阅读理解（四选一） · 题干 · 第33题题干",
+          "year": 2023,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第33题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is true of New England?",
+          "translation": "关于新英格兰，以下哪项是正确的？",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 题干 · 第26题题干",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第26题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The following simple strategies will help you return to exercise safely after a break.",
+          "translation": "以下简单策略将帮助你在中断锻炼后安全地恢复运动。",
+          "source": "2022 · 英语二 · 段落小标题（7选5） · 文章原文 · 第1段，第4句",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "段落小标题（7选5）",
+          "questionNum": "文章原文 · 第1段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is a reason for the researchers to study meat eating?",
+          "translation": "研究人员选择研究肉食行为的原因是以下哪一项？",
+          "source": "2022 · 英语二 · 阅读理解（四选一） · 题干 · 第37题题干",
+          "year": 2022,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第37题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following measures would the Productivity Commission support?",
+          "translation": "以下哪项措施会得到生产力委员会的支持？",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 题干 · 第38题题干",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第38题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "However, the mechanisms proposed were unwieldy and the Bill was voted down following the change in government later that year.",
+          "translation": "然而，该法案提出的机制过于繁琐，并且在当年晚些时候政府更迭后被否决。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第8段，第3句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第8段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following would be the best title for the text?",
+          "translation": "以下哪项最适合作为本文的标题？",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 题干 · 第25题题干",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第25题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following is true about Madrid's clean air zone?",
+          "translation": "关于马德里的清洁空气区，以下哪项是正确的？",
+          "source": "2020 · 英语二 · 阅读理解（四选一） · 题干 · 第31题题干",
+          "year": 2020,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第31题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following might be the best title for this text?",
+          "translation": "以下哪项可能是本文的最佳标题？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第40题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第40题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following characterizes the scientific publishing model?",
+          "translation": "以下哪项是科学出版模式的特征？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第30题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第30题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following has contributed to CEO pay rise?",
+          "translation": "以下哪项促成了首席执行官薪酬的上涨？",
+          "source": "2020 · 英语二 · 阅读理解（四选一） · 题干 · 第26题题干",
+          "year": 2020,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第26题题干",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Which of the following can be inferred from the text?",
+          "translation": "从文中可以推断出以下哪一项？",
+          "source": "2020 · 英语一 · 阅读理解（四选一） · 题干 · 第35题题干",
+          "year": 2020,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "题干 · 第35题题干",
+          "isAuthentic": true
+        }
+      ]
+    },
+    {
+      "word": "data",
+      "phonetic": "/ˈdætə/",
+      "rank": 18,
+      "totalFreq": 80,
+      "cefr": "B2",
+      "senses": [
+        {
+          "id": "data-s1",
+          "num": 1,
+          "pos": "n.",
+          "definition": "数据；资料； （计算机）数据",
+          "freq": 80,
+          "examples": [
+            {
+              "sentence": "Employers need to manage AI tools with the same level of care as any other form of data sharing or storage.",
+              "translation": "雇主需要像对待任何其他形式的数据共享或存储一样，以同等的谨慎程度来管理人工智能工具。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第3段，第2句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "The situation presents a delicate balance between leveraging AI for its productivity gains and risking confidential data exposure.",
+              "translation": "当前的局势需要在利用人工智能提升生产力与承担机密数据泄露风险之间寻求微妙的平衡。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第3段，第1句",
+              "isAuthentic": true
+            },
+            {
+              "sentence": "It gains Microsoft broad rights to the data inputted or outputted by any user — rights to use this data in any way it sees fit; it can even share it with third parties.",
+              "translation": "这使微软获得了用户输入或输出数据的广泛权利——微软有权以其认为合适的任何方式使用这些数据，甚至可以将其与第三方共享。",
+              "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+              "year": 2026,
+              "examType": "英语二",
+              "section": "阅读理解（四选一）",
+              "questionNum": "文章原文 · 第2段，第3句",
+              "isAuthentic": true
+            }
+          ]
+        }
+      ],
+      "belongs_e1": true,
+      "belongs_e2": true,
+      "sentences_e1": [
+        {
+          "sentence": "In 1967 a scientific survey of the Peloponnesian coast was gathering data to analyze changes in sea levels when British oceanographer Nicholas Flemming first spotted the sunken structures.",
+          "translation": "1967年，一项针对伯罗奔尼撒半岛海岸的科学调查正在收集数据以分析海平面变化，此时英国海洋学家尼古拉斯·弗莱明首次发现了这些沉没的建筑物。",
+          "source": "2025 · 英语一 · 完形填空（四选一） · 文章原文 · 第2段，第4句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第2段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Scientists have employed a variety of ways to engage the general public in their research, such as making data analysis into an online game or sample collection into a smartphone application.",
+          "translation": "科学家们采用了多种方式让普通公众参与他们的研究，例如将数据分析转化为在线游戏，或将样本收集开发为智能手机应用程序。",
+          "source": "2025 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第3段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In the information era, large data sets, small teams and financial restrictions have slowed scientific process.",
+          "translation": "在信息时代，庞大的数据集、小型团队和资金限制减缓了科学进程。",
+          "source": "2025 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第2段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And it is equally true that science's unrelenting appetite for information has caused a mushrooming of energy-intensive data centres around the world.",
+          "translation": "同样真实的是，科学对信息永不满足的渴求已导致全球能源密集型数据中心如雨后春笋般涌现。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "But it's also a lot more personal, Ortiz says, arguing that because art is so closely linked to a person, it could raise data protection and privacy problems.",
+          "translation": "但奥尔蒂斯表示，这还涉及更深层次的个人问题。她认为，由于艺术与创作者本人有着千丝万缕的联系，这可能会引发数据保护和隐私方面的问题。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Scopus itself has all the data necessary to detect this malpractice.",
+          "translation": "Scopus数据库本身就拥有检测这种不当行为所需的全部数据。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Data can be gathered on where the customer can be engaged, such as location, devices used, website interactions, and sites visited, to display marketing messages in appropriate forms, including emails, social media posts, pop-up advertisements, and banners at an appropriate frequency.",
+          "translation": "可以收集有关客户互动渠道的数据，例如位置、使用的设备、网站交互和访问过的站点，以便以适当的形式（包括电子邮件、社交媒体帖子、弹窗广告和横幅）并按适当的频率展示营销信息。",
+          "source": "2023 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第3段，第5句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "For example, AI can be used to analyse what type of advertising content or copy would be appropriate to \"speak\" to a specific target customer group by revealing information about trends and preferences through the analysis of big data .",
+          "translation": "例如，人工智能可以通过大数据分析揭示有关趋势和偏好的信息，从而分析出何种类型的广告内容或文案适合与特定目标客户群体进行“沟通”。",
+          "source": "2023 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第1段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They reimagined the 300-year-old score by injecting the latest climate prediction data for each season—provided by Monash University's Climate Change Communication Research Hub.",
+          "translation": "他们对这部有300年历史的乐谱进行了重新构思，融入了由莫纳什大学气候变化传播研究中心提供的最新季节性气候预测数据。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Ferraro analyzed satellite data showing annual forest loss from 2008 to 2012—including during Indonesia's phase-in of the antipoverty program—in 7,468 forested villages across 15 provinces.",
+          "translation": "费拉罗分析了2008年至2012年间的卫星数据，这些数据显示了印度尼西亚15个省份7468个森林村庄的年度森林损失情况，其中包括该国扶贫计划的逐步实施阶段。",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Yet the FCC also ended the investigations of broadband providers that imposed data caps on their rivals' streaming services but not their own.",
+          "translation": "然而，联邦通信委员会也终止了对宽带服务商的调查，这些服务商对竞争对手的流媒体服务设置了数据上限，却对自家服务网开一面。",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "These are \"tools that help people use data , not a replacement for people,\" says Patrick H. Winston, a professor of artificial intelligence and computer science at MIT.",
+          "translation": "麻省理工学院人工智能与计算机科学教授帕特里克·H·温斯顿表示，这些是'帮助人们使用数据的工具，而非取代人的工具'。",
+          "source": "2021 · 英语一 · 选句填空（7选5） · 文章原文 · 第6段，第5句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "选句填空（7选5）",
+          "questionNum": "文章原文 · 第6段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"Machine learning often provides a more reliable form of statistics which makes data more valuable,\" says Winston.",
+          "translation": "温斯顿表示：“机器学习往往能提供更可靠的统计方式，从而提升数据的价值。”",
+          "source": "2021 · 英语一 · 选句填空（7选5） · 文章原文 · 第10段，第1句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "选句填空（7选5）",
+          "questionNum": "文章原文 · 第10段，第1句",
+          "isAuthentic": true
+        }
+      ],
+      "sentences_e2": [
+        {
+          "sentence": "Employers need to manage AI tools with the same level of care as any other form of data sharing or storage.",
+          "translation": "雇主需要像对待任何其他形式的数据共享或存储一样，以同等的谨慎程度来管理人工智能工具。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The situation presents a delicate balance between leveraging AI for its productivity gains and risking confidential data exposure.",
+          "translation": "当前的局势需要在利用人工智能提升生产力与承担机密数据泄露风险之间寻求微妙的平衡。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It gains Microsoft broad rights to the data inputted or outputted by any user — rights to use this data in any way it sees fit; it can even share it with third parties.",
+          "translation": "这使微软获得了用户输入或输出数据的广泛权利——微软有权以其认为合适的任何方式使用这些数据，甚至可以将其与第三方共享。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+          "translation": "我们的数据表明，像这样与人工智能互动，可以让我们感到被倾听，并减少孤独感。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Flo Health and the FTC settled the matter with a Consent Order requiring the company to get app users' express affirmative consent before sharing their health information as well as to instruct the third parties to delete the data they had obtained.",
+          "translation": "Flo Health与联邦贸易委员会通过一项同意令解决了此事，该命令要求该公司在分享用户健康信息前必须获得应用用户明确的肯定性同意，并指示第三方删除已获取的数据。",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The FTC alleged in a complaint that \"despite express privacy claims, the company took control of users' sensitive fertility data and shared it with third parties.\"",
+          "translation": "联邦贸易委员会在起诉书中指控，“尽管该公司明确做出了隐私承诺，但仍控制了用户的敏感生育数据并将其分享给第三方。”",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第3句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "States have begun implementing their own solutions to shore up protections for consumer-generated health data .",
+          "translation": "各州已开始实施各自的解决方案，以加强对消费者生成的健康数据的保护。",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        }
+      ],
+      "all_sentences": [
+        {
+          "sentence": "Employers need to manage AI tools with the same level of care as any other form of data sharing or storage.",
+          "translation": "雇主需要像对待任何其他形式的数据共享或存储一样，以同等的谨慎程度来管理人工智能工具。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The situation presents a delicate balance between leveraging AI for its productivity gains and risking confidential data exposure.",
+          "translation": "当前的局势需要在利用人工智能提升生产力与承担机密数据泄露风险之间寻求微妙的平衡。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第1句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "It gains Microsoft broad rights to the data inputted or outputted by any user — rights to use this data in any way it sees fit; it can even share it with third parties.",
+          "translation": "这使微软获得了用户输入或输出数据的广泛权利——微软有权以其认为合适的任何方式使用这些数据，甚至可以将其与第三方共享。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第2段，第3句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Our data shows that engaging with AI like this can leave us feeling heard and less isolated.",
+          "translation": "我们的数据表明，像这样与人工智能互动，可以让我们感到被倾听，并减少孤独感。",
+          "source": "2026 · 英语二 · 阅读理解（四选一） · 文章原文 · 第1段，第2句",
+          "year": 2026,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In 1967 a scientific survey of the Peloponnesian coast was gathering data to analyze changes in sea levels when British oceanographer Nicholas Flemming first spotted the sunken structures.",
+          "translation": "1967年，一项针对伯罗奔尼撒半岛海岸的科学调查正在收集数据以分析海平面变化，此时英国海洋学家尼古拉斯·弗莱明首次发现了这些沉没的建筑物。",
+          "source": "2025 · 英语一 · 完形填空（四选一） · 文章原文 · 第2段，第4句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "完形填空（四选一）",
+          "questionNum": "文章原文 · 第2段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Scientists have employed a variety of ways to engage the general public in their research, such as making data analysis into an online game or sample collection into a smartphone application.",
+          "translation": "科学家们采用了多种方式让普通公众参与他们的研究，例如将数据分析转化为在线游戏，或将样本收集开发为智能手机应用程序。",
+          "source": "2025 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第3段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第3段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "In the information era, large data sets, small teams and financial restrictions have slowed scientific process.",
+          "translation": "在信息时代，庞大的数据集、小型团队和资金限制减缓了科学进程。",
+          "source": "2025 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第2段，第1句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第2段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "And it is equally true that science's unrelenting appetite for information has caused a mushrooming of energy-intensive data centres around the world.",
+          "translation": "同样真实的是，科学对信息永不满足的渴求已导致全球能源密集型数据中心如雨后春笋般涌现。",
+          "source": "2025 · 英语一 · 阅读理解（四选一） · 文章原文 · 第2段，第2句",
+          "year": 2025,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第2段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Flo Health and the FTC settled the matter with a Consent Order requiring the company to get app users' express affirmative consent before sharing their health information as well as to instruct the third parties to delete the data they had obtained.",
+          "translation": "Flo Health与联邦贸易委员会通过一项同意令解决了此事，该命令要求该公司在分享用户健康信息前必须获得应用用户明确的肯定性同意，并指示第三方删除已获取的数据。",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第4句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第4句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "The FTC alleged in a complaint that \"despite express privacy claims, the company took control of users' sensitive fertility data and shared it with third parties.\"",
+          "translation": "联邦贸易委员会在起诉书中指控，“尽管该公司明确做出了隐私承诺，但仍控制了用户的敏感生育数据并将其分享给第三方。”",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第3段，第3句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "But it's also a lot more personal, Ortiz says, arguing that because art is so closely linked to a person, it could raise data protection and privacy problems.",
+          "translation": "但奥尔蒂斯表示，这还涉及更深层次的个人问题。她认为，由于艺术与创作者本人有着千丝万缕的联系，这可能会引发数据保护和隐私方面的问题。",
+          "source": "2024 · 英语一 · 阅读理解（四选一） · 文章原文 · 第7段，第3句",
+          "year": 2024,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第7段，第3句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "States have begun implementing their own solutions to shore up protections for consumer-generated health data .",
+          "translation": "各州已开始实施各自的解决方案，以加强对消费者生成的健康数据的保护。",
+          "source": "2024 · 英语二 · 阅读理解（四选一） · 文章原文 · 第5段，第2句",
+          "year": 2024,
+          "examType": "英语二",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Scopus itself has all the data necessary to detect this malpractice.",
+          "translation": "Scopus数据库本身就拥有检测这种不当行为所需的全部数据。",
+          "source": "2023 · 英语一 · 阅读理解（四选一） · 文章原文 · 第5段，第1句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第5段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Data can be gathered on where the customer can be engaged, such as location, devices used, website interactions, and sites visited, to display marketing messages in appropriate forms, including emails, social media posts, pop-up advertisements, and banners at an appropriate frequency.",
+          "translation": "可以收集有关客户互动渠道的数据，例如位置、使用的设备、网站交互和访问过的站点，以便以适当的形式（包括电子邮件、社交媒体帖子、弹窗广告和横幅）并按适当的频率展示营销信息。",
+          "source": "2023 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第3段，第5句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第3段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "For example, AI can be used to analyse what type of advertising content or copy would be appropriate to \"speak\" to a specific target customer group by revealing information about trends and preferences through the analysis of big data .",
+          "translation": "例如，人工智能可以通过大数据分析揭示有关趋势和偏好的信息，从而分析出何种类型的广告内容或文案适合与特定目标客户群体进行“沟通”。",
+          "source": "2023 · 英语一 · 英译汉（划线句子翻译） · 文章原文 · 第1段，第2句",
+          "year": 2023,
+          "examType": "英语一",
+          "section": "英译汉（划线句子翻译）",
+          "questionNum": "文章原文 · 第1段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "They reimagined the 300-year-old score by injecting the latest climate prediction data for each season—provided by Monash University's Climate Change Communication Research Hub.",
+          "translation": "他们对这部有300年历史的乐谱进行了重新构思，融入了由莫纳什大学气候变化传播研究中心提供的最新季节性气候预测数据。",
+          "source": "2022 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2022,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Ferraro analyzed satellite data showing annual forest loss from 2008 to 2012—including during Indonesia's phase-in of the antipoverty program—in 7,468 forested villages across 15 provinces.",
+          "translation": "费拉罗分析了2008年至2012年间的卫星数据，这些数据显示了印度尼西亚15个省份7468个森林村庄的年度森林损失情况，其中包括该国扶贫计划的逐步实施阶段。",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 文章原文 · 第6段，第1句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第6段，第1句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "Yet the FCC also ended the investigations of broadband providers that imposed data caps on their rivals' streaming services but not their own.",
+          "translation": "然而，联邦通信委员会也终止了对宽带服务商的调查，这些服务商对竞争对手的流媒体服务设置了数据上限，却对自家服务网开一面。",
+          "source": "2021 · 英语一 · 阅读理解（四选一） · 文章原文 · 第3段，第2句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "阅读理解（四选一）",
+          "questionNum": "文章原文 · 第3段，第2句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "These are \"tools that help people use data , not a replacement for people,\" says Patrick H. Winston, a professor of artificial intelligence and computer science at MIT.",
+          "translation": "麻省理工学院人工智能与计算机科学教授帕特里克·H·温斯顿表示，这些是'帮助人们使用数据的工具，而非取代人的工具'。",
+          "source": "2021 · 英语一 · 选句填空（7选5） · 文章原文 · 第6段，第5句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "选句填空（7选5）",
+          "questionNum": "文章原文 · 第6段，第5句",
+          "isAuthentic": true
+        },
+        {
+          "sentence": "\"Machine learning often provides a more reliable form of statistics which makes data more valuable,\" says Winston.",
+          "translation": "温斯顿表示：“机器学习往往能提供更可靠的统计方式，从而提升数据的价值。”",
+          "source": "2021 · 英语一 · 选句填空（7选5） · 文章原文 · 第10段，第1句",
+          "year": 2021,
+          "examType": "英语一",
+          "section": "选句填空（7选5）",
+          "questionNum": "文章原文 · 第10段，第1句",
+          "isAuthentic": true
+        }
+      ]
+    }
+  ]
+}
