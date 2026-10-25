@@ -40,13 +40,20 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// 3. Fetch Event: Stale-While-Revalidate for data & Cache-First for static assets
+// 3. Fetch Event
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip non-GET and cross-origin requests (e.g. dict.youdao.com audio or chrome extensions)
-  if (request.method !== 'GET' || url.origin !== self.location.origin) {
+  // Strictly skip dev requests on localhost or non-GET / cross-origin
+  if (
+    request.method !== 'GET' ||
+    url.origin !== self.location.origin ||
+    url.hostname === 'localhost' ||
+    url.hostname === '127.0.0.1' ||
+    url.pathname.startsWith('/@') ||
+    url.pathname.startsWith('/src/')
+  ) {
     return;
   }
 
@@ -59,7 +66,6 @@ self.addEventListener('fetch', (event) => {
   }
 
   // B. Large Data JSON files (/data/*.json): Stale-While-Revalidate
-  // Instant response from cache, update in background
   if (url.pathname.startsWith('/data/')) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) => {
@@ -78,7 +84,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // C. Static Assets (JS, CSS, SVG, Images): Cache First with network fallback
+  // C. Static Assets: Cache First with network fallback
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       if (cachedResponse) {
