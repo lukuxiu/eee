@@ -124,9 +124,10 @@ export const App: React.FC = () => {
     async function initData() {
       try {
         setLoading(true);
+        const base = import.meta.env.BASE_URL || './';
         const [res1, res2] = await Promise.all([
-          fetch('/data/english1.json').then((r) => r.json()),
-          fetch('/data/english2.json').then((r) => r.json()),
+          fetch(`${base}data/english1.json`).then((r) => r.json()),
+          fetch(`${base}data/english2.json`).then((r) => r.json()),
         ]);
         const combinedWords: WordEntry[] = [...res1, ...res2];
         setWords(combinedWords);

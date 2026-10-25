@@ -26,12 +26,13 @@ export const DataManagementModal: React.FC<DataManagementModalProps> = ({
 
   useEffect(() => {
     if (isOpen) {
-      fetch('/data/import_report.json')
+      const base = import.meta.env.BASE_URL || './';
+      fetch(`${base}data/import_report.json`)
         .then((res) => res.json())
         .then((data) => setReport(data))
         .catch((err) => console.warn('Failed to load report:', err));
 
-      fetch('/data/lazynote_1199_report.json')
+      fetch(`${base}data/lazynote_1199_report.json`)
         .then((res) => res.json())
         .then((data) => setLnReport(data))
         .catch((err) => console.warn('Failed to load ln report:', err));
