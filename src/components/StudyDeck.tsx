@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { WordEntry, WordStudyRecord, UserSettings, RecallRating, StudyMode } from '../types';
+import { SessionStats } from '../storage/sessionStore';
 import { CardFront } from './CardFront';
 import { CardBack } from './CardBack';
 import { RotateCcw, Award, RefreshCw, AlertTriangle } from 'lucide-react';
@@ -10,19 +11,15 @@ interface StudyDeckProps {
   records: Record<string, WordStudyRecord>;
   settings: UserSettings;
   mode: StudyMode;
+  initialIndex?: number;
+  initialStats?: SessionStats;
+  initialCompleted?: boolean;
+  onProgressUpdate?: (index: number, stats: SessionStats, isCompleted: boolean) => void;
   onRecordRecall: (wordId: string, rating: RecallRating) => void;
   onRevokeAndCorrect: (wordId: string) => void;
   onToggleFavorite: (wordId: string) => void;
   onRestartSession: () => void;
   onRetryMistakes: (mistakenWordIds: string[]) => void;
-}
-
-interface SessionStats {
-  know: number;
-  unfamiliar: number;
-  dont_know: number;
-  corrected: number;
-  mistakenWordIds: string[];
 }
 
 interface PreviousWordInfo {
@@ -36,38 +33,66 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
   records,
   settings,
   mode,
+  initialIndex = 0,
+  initialStats,
+  initialCompleted = false,
+  onProgressUpdate,
   onRecordRecall,
   onRevokeAndCorrect,
   onToggleFavorite,
   onRestartSession,
   onRetryMistakes,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [isRevealed, setIsRevealed] = useState(false);
   const [lastRating, setLastRating] = useState<RecallRating | null>(null);
   const [hasCorrected, setHasCorrected] = useState(false);
-  const [sessionCompleted, setSessionCompleted] = useState(false);
+  const [sessionCompleted, setSessionCompleted] = useState(initialCompleted);
   const [previousWord, setPreviousWord] = useState<PreviousWordInfo | null>(null);
   const [retroNotice, setRetroNotice] = useState<string>('');
 
   const autoAdvanceTimerRef = useRef<number | null>(null);
 
-  const [stats, setStats] = useState<SessionStats>({
-    know: 0,
-    unfamiliar: 0,
-    dont_know: 0,
-    corrected: 0,
-    mistakenWordIds: [],
-  });
+  const [stats, setStats] = useState<SessionStats>(
+    initialStats || {
+      know: 0,
+      unfamiliar: 0,
+      dont_know: 0,
+      corrected: 0,
+      mistakenWordIds: [],
+    }
+  );
 
   const lastQueueKeyRef = useRef<string>('');
 
-  // Reset only when a different queue is loaded
+  // Sync state if initialIndex or initialStats change from restored session
+  useEffect(() => {
+    if (initialIndex > 0 && currentIndex === 0) {
+      setCurrentIndex(initialIndex);
+    }
+    if (initialStats && stats.know === 0 && stats.unfamiliar === 0 && stats.dont_know === 0) {
+      setStats(initialStats);
+    }
+    if (initialCompleted) {
+      setSessionCompleted(true);
+    }
+  }, [initialIndex, initialStats, initialCompleted]);
+
+  // Reset only when a truly different queue is loaded
   useEffect(() => {
     const queueKey = queue.map((w) => w.id).join(',');
     if (!queueKey || lastQueueKeyRef.current === queueKey) {
       return;
     }
+
+    // If it's the very first mount and we restored an ongoing session with the same queue, preserve it!
+    if (lastQueueKeyRef.current === '') {
+      lastQueueKeyRef.current = queueKey;
+      if (initialIndex > 0 || initialCompleted) {
+        return;
+      }
+    }
+
     lastQueueKeyRef.current = queueKey;
     setCurrentIndex(0);
     setIsRevealed(false);
@@ -76,13 +101,14 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
     setSessionCompleted(false);
     setPreviousWord(null);
     setRetroNotice('');
-    setStats({
+    const freshStats: SessionStats = {
       know: 0,
       unfamiliar: 0,
       dont_know: 0,
       corrected: 0,
       mistakenWordIds: [],
-    });
+    };
+    setStats(freshStats);
     if (autoAdvanceTimerRef.current) {
       window.clearTimeout(autoAdvanceTimerRef.current);
     }
@@ -100,22 +126,20 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
   const handleRating = (rating: RecallRating) => {
     if (!currentWord) return;
 
-    // 1. Record the recall
+    // 1. Record the recall in storage & engine
     onRecordRecall(currentWord.id, rating);
 
     // 2. Update session statistics
-    setStats((prev) => {
-      const nextStats = { ...prev };
-      if (rating === 'know') nextStats.know += 1;
-      else if (rating === 'unfamiliar') nextStats.unfamiliar += 1;
-      else if (rating === 'dont_know') {
-        nextStats.dont_know += 1;
-        if (!nextStats.mistakenWordIds.includes(currentWord.id)) {
-          nextStats.mistakenWordIds.push(currentWord.id);
-        }
+    const nextStats: SessionStats = { ...stats };
+    if (rating === 'know') nextStats.know += 1;
+    else if (rating === 'unfamiliar') nextStats.unfamiliar += 1;
+    else if (rating === 'dont_know') {
+      nextStats.dont_know += 1;
+      if (!nextStats.mistakenWordIds.includes(currentWord.id)) {
+        nextStats.mistakenWordIds.push(currentWord.id);
       }
-      return nextStats;
-    });
+    }
+    setStats(nextStats);
 
     // 3. Save info for retroactive undo
     setPreviousWord({
@@ -126,12 +150,15 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
 
     // 4. Immediately advance to next card!
     if (currentIndex + 1 < queue.length) {
-      setCurrentIndex((prev) => prev + 1);
+      const nextIdx = currentIndex + 1;
+      setCurrentIndex(nextIdx);
       setIsRevealed(false);
       setLastRating(null);
       setHasCorrected(false);
+      onProgressUpdate?.(nextIdx, nextStats, false);
     } else {
       setSessionCompleted(true);
+      onProgressUpdate?.(currentIndex + 1, nextStats, true);
     }
   };
 
@@ -142,16 +169,15 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
     onRevokeAndCorrect(currentWord.id);
     setHasCorrected(true);
 
-    setStats((prev) => {
-      const nextStats = { ...prev };
-      nextStats.know = Math.max(0, nextStats.know - 1);
-      nextStats.dont_know += 1;
-      nextStats.corrected += 1;
-      if (!nextStats.mistakenWordIds.includes(currentWord.id)) {
-        nextStats.mistakenWordIds.push(currentWord.id);
-      }
-      return nextStats;
-    });
+    const nextStats = { ...stats };
+    nextStats.know = Math.max(0, nextStats.know - 1);
+    nextStats.dont_know += 1;
+    nextStats.corrected += 1;
+    if (!nextStats.mistakenWordIds.includes(currentWord.id)) {
+      nextStats.mistakenWordIds.push(currentWord.id);
+    }
+    setStats(nextStats);
+    onProgressUpdate?.(currentIndex, nextStats, sessionCompleted);
   };
 
   const handleRetroRevokePrevious = () => {
@@ -161,16 +187,15 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
     setRetroNotice(`已成功将上一词「${previousWord.word.word}」修正为记错！`);
     setTimeout(() => setRetroNotice(''), 4000);
 
-    setStats((prev) => {
-      const nextStats = { ...prev };
-      nextStats.know = Math.max(0, nextStats.know - 1);
-      nextStats.dont_know += 1;
-      nextStats.corrected += 1;
-      if (!nextStats.mistakenWordIds.includes(previousWord.word.id)) {
-        nextStats.mistakenWordIds.push(previousWord.word.id);
-      }
-      return nextStats;
-    });
+    const nextStats = { ...stats };
+    nextStats.know = Math.max(0, nextStats.know - 1);
+    nextStats.dont_know += 1;
+    nextStats.corrected += 1;
+    if (!nextStats.mistakenWordIds.includes(previousWord.word.id)) {
+      nextStats.mistakenWordIds.push(previousWord.word.id);
+    }
+    setStats(nextStats);
+    onProgressUpdate?.(currentIndex, nextStats, sessionCompleted);
   };
 
   const handleNextCard = () => {
@@ -185,12 +210,15 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
     }
 
     if (currentIndex + 1 < queue.length) {
-      setCurrentIndex((prev) => prev + 1);
+      const nextIdx = currentIndex + 1;
+      setCurrentIndex(nextIdx);
       setIsRevealed(false);
       setLastRating(null);
       setHasCorrected(false);
+      onProgressUpdate?.(nextIdx, stats, false);
     } else {
       setSessionCompleted(true);
+      onProgressUpdate?.(currentIndex + 1, stats, true);
     }
   };
 

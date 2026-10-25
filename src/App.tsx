@@ -35,6 +35,13 @@ import {
 } from './engine/spacedRepetition';
 import { calculateCategoryStats } from './engine/categoryEngine';
 import { buildStudyQueue } from './engine/queueScheduler';
+import { 
+  getStoredActiveSession, 
+  saveActiveSession, 
+  getStoredTab, 
+  saveStoredTab,
+  SessionStats 
+} from './storage/sessionStore';
 
 const VISITS_STORAGE_KEY = 'kaoyan:visit-dock:v1';
 
@@ -58,12 +65,28 @@ export const App: React.FC = () => {
   // Selected word detail inspection modal
   const [inspectingWord, setInspectingWord] = useState<WordEntry | null>(null);
 
-  // Navigation State
-  const [currentTab, setCurrentTab] = useState<'study' | 'context' | 'words' | 'stats'>('study');
+  // Navigation State with tab persistence
+  const [currentTab, setCurrentTabState] = useState<'study' | 'context' | 'words' | 'stats'>(() => getStoredTab());
+  const setCurrentTab = (tab: 'study' | 'context' | 'words' | 'stats') => {
+    setCurrentTabState(tab);
+    saveStoredTab(tab);
+  };
+
   const [studyMode, setStudyMode] = useState<StudyMode>('mixed');
   const [activeCategory, setActiveCategory] = useState<CategoryFilterKey>('all');
   const [customConfig, setCustomConfig] = useState<CustomDeckConfig | undefined>();
+  
+  // Persisted Session Queue State
   const [sessionQueue, setSessionQueue] = useState<WordEntry[]>([]);
+  const [sessionIndex, setSessionIndex] = useState<number>(0);
+  const [sessionStats, setSessionStats] = useState<SessionStats>({
+    know: 0,
+    unfamiliar: 0,
+    dont_know: 0,
+    corrected: 0,
+    mistakenWordIds: [],
+  });
+  const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
 
   // Modals
   const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
@@ -95,7 +118,7 @@ export const App: React.FC = () => {
     });
   }, []);
 
-  // 1. Load initial datasets (English 1 and English 2) & Storage
+  // 1. Load initial datasets & restore active session if available
   useEffect(() => {
     async function initData() {
       try {
@@ -114,7 +137,33 @@ export const App: React.FC = () => {
         setRecords(storedRecords);
         setSettings(storedSettings);
 
-        // Initial session queue
+        // Check if there is an active session in localStorage to restore!
+        const savedSession = getStoredActiveSession();
+        if (savedSession && savedSession.queueWordIds && savedSession.queueWordIds.length > 0) {
+          const wordsMap = new Map(combinedWords.map((w) => [w.id, w]));
+          const restoredQueue = savedSession.queueWordIds
+            .map((id) => wordsMap.get(id))
+            .filter((w): w is WordEntry => Boolean(w));
+
+          if (restoredQueue.length > 0) {
+            setStudyMode(savedSession.mode || 'mixed');
+            setActiveCategory(savedSession.category || 'all');
+            setCustomConfig(savedSession.customConfig);
+            setSessionQueue(restoredQueue);
+            setSessionIndex(Math.min(savedSession.currentIndex || 0, restoredQueue.length));
+            setSessionStats(savedSession.stats || {
+              know: 0,
+              unfamiliar: 0,
+              dont_know: 0,
+              corrected: 0,
+              mistakenWordIds: [],
+            });
+            setSessionCompleted(Boolean(savedSession.isCompleted));
+            return;
+          }
+        }
+
+        // If no saved session, initialize recommended mixed queue
         const initialQueue = buildStudyQueue({
           mode: 'mixed',
           words: combinedWords,
@@ -125,6 +174,26 @@ export const App: React.FC = () => {
           now: Date.now(),
         });
         setSessionQueue(initialQueue);
+        setSessionIndex(0);
+        setSessionCompleted(false);
+        const freshStats: SessionStats = {
+          know: 0,
+          unfamiliar: 0,
+          dont_know: 0,
+          corrected: 0,
+          mistakenWordIds: [],
+        };
+        setSessionStats(freshStats);
+
+        saveActiveSession({
+          mode: 'mixed',
+          category: 'all',
+          queueWordIds: initialQueue.map((w) => w.id),
+          currentIndex: 0,
+          stats: freshStats,
+          isCompleted: false,
+          timestamp: Date.now(),
+        });
       } catch (err) {
         console.error('Failed to initialize application data:', err);
       } finally {
@@ -145,9 +214,30 @@ export const App: React.FC = () => {
 
   // 3. Helper to generate a new session queue
   const generateNewSessionQueue = useCallback(
-    (modeToUse: StudyMode, configToUse?: CustomDeckConfig, customWords?: WordEntry[]) => {
+    (modeToUse: StudyMode, configToUse?: CustomDeckConfig, customWords?: WordEntry[], catToUse?: CategoryFilterKey) => {
+      const activeCat = catToUse || activeCategory;
       if (customWords) {
         setSessionQueue(customWords);
+        setSessionIndex(0);
+        setSessionCompleted(false);
+        const freshStats: SessionStats = {
+          know: 0,
+          unfamiliar: 0,
+          dont_know: 0,
+          corrected: 0,
+          mistakenWordIds: [],
+        };
+        setSessionStats(freshStats);
+        saveActiveSession({
+          mode: modeToUse,
+          category: activeCat,
+          customConfig: configToUse,
+          queueWordIds: customWords.map((w) => w.id),
+          currentIndex: 0,
+          stats: freshStats,
+          isCompleted: false,
+          timestamp: Date.now(),
+        });
         return;
       }
       if (words.length === 0) return;
@@ -162,11 +252,52 @@ export const App: React.FC = () => {
         now: Date.now(),
       });
       setSessionQueue(q);
+      setSessionIndex(0);
+      setSessionCompleted(false);
+      const freshStats: SessionStats = {
+        know: 0,
+        unfamiliar: 0,
+        dont_know: 0,
+        corrected: 0,
+        mistakenWordIds: [],
+      };
+      setSessionStats(freshStats);
+      saveActiveSession({
+        mode: modeToUse,
+        category: activeCat,
+        customConfig: configToUse,
+        queueWordIds: q.map((w) => w.id),
+        currentIndex: 0,
+        stats: freshStats,
+        isCompleted: false,
+        timestamp: Date.now(),
+      });
     },
-    [words, records, settings]
+    [words, records, settings, activeCategory]
   );
 
-  // Re-generate session queue when mode, filter, or customConfig changes
+  // Sync session progress from StudyDeck to localStorage
+  const handleProgressUpdate = useCallback(
+    (index: number, stats: SessionStats, isCompleted: boolean) => {
+      setSessionIndex(index);
+      setSessionStats(stats);
+      setSessionCompleted(isCompleted);
+
+      saveActiveSession({
+        mode: studyMode,
+        category: activeCategory,
+        customConfig,
+        queueWordIds: sessionQueue.map((w) => w.id),
+        currentIndex: index,
+        stats,
+        isCompleted,
+        timestamp: Date.now(),
+      });
+    },
+    [studyMode, activeCategory, customConfig, sessionQueue]
+  );
+
+  // Re-generate session queue when mode changes
   const handleSelectMode = (newMode: StudyMode) => {
     setStudyMode(newMode);
     setCustomConfig(undefined);
@@ -314,11 +445,30 @@ export const App: React.FC = () => {
             now: Date.now(),
           });
           setSessionQueue(q);
+          setSessionIndex(0);
+          setSessionCompleted(false);
+          const freshStats: SessionStats = {
+            know: 0,
+            unfamiliar: 0,
+            dont_know: 0,
+            corrected: 0,
+            mistakenWordIds: [],
+          };
+          setSessionStats(freshStats);
+          saveActiveSession({
+            mode: studyMode,
+            category: activeCategory,
+            queueWordIds: q.map((w) => w.id),
+            currentIndex: 0,
+            stats: freshStats,
+            isCompleted: false,
+            timestamp: Date.now(),
+          });
         }, 0);
       }
       return merged;
     });
-  }, [words, records, studyMode]);
+  }, [words, records, studyMode, activeCategory]);
 
   // Category select
   const handleSelectCategory = (catKey: CategoryFilterKey) => {
@@ -334,7 +484,7 @@ export const App: React.FC = () => {
     };
     setCustomConfig(cfg);
     setStudyMode('custom');
-    generateNewSessionQueue('custom', cfg);
+    generateNewSessionQueue('custom', cfg, undefined, catKey);
     setCurrentTab('study');
   };
 
@@ -343,7 +493,26 @@ export const App: React.FC = () => {
     const subset = words.filter((w) => mistakenWordIds.includes(w.id));
     if (subset.length > 0) {
       setSessionQueue(subset);
+      setSessionIndex(0);
+      setSessionCompleted(false);
       setStudyMode('error');
+      const freshStats: SessionStats = {
+        know: 0,
+        unfamiliar: 0,
+        dont_know: 0,
+        corrected: 0,
+        mistakenWordIds: [],
+      };
+      setSessionStats(freshStats);
+      saveActiveSession({
+        mode: 'error',
+        category: 'dont_know',
+        queueWordIds: subset.map((w) => w.id),
+        currentIndex: 0,
+        stats: freshStats,
+        isCompleted: false,
+        timestamp: Date.now(),
+      });
     }
   };
 
@@ -351,7 +520,26 @@ export const App: React.FC = () => {
     const wordIndex = words.findIndex((w) => w.id === word.id);
     const slice = wordIndex >= 0 ? words.slice(wordIndex, wordIndex + 30) : [word];
     setSessionQueue(slice);
+    setSessionIndex(0);
+    setSessionCompleted(false);
     setStudyMode('custom');
+    const freshStats: SessionStats = {
+      know: 0,
+      unfamiliar: 0,
+      dont_know: 0,
+      corrected: 0,
+      mistakenWordIds: [],
+    };
+    setSessionStats(freshStats);
+    saveActiveSession({
+      mode: 'custom',
+      category: 'all',
+      queueWordIds: slice.map((w) => w.id),
+      currentIndex: 0,
+      stats: freshStats,
+      isCompleted: false,
+      timestamp: Date.now(),
+    });
     setCurrentTab('study');
   };
 
@@ -360,7 +548,7 @@ export const App: React.FC = () => {
       <div className="min-h-screen bg-paper-50 dark:bg-paper-950 flex flex-col items-center justify-center p-4">
         <div className="w-10 h-10 border-2 border-stone-900 dark:border-stone-100 border-t-transparent rounded-full animate-spin" />
         <p className="mt-4 text-xs font-mono text-stone-500 dark:text-stone-400">
-          正在加载考研英语一 &amp; 英语二真题单词大观库与离线缓存...
+          正在加载考研英语一 &amp; 英语二真题单词大观库...
         </p>
       </div>
     );
@@ -397,6 +585,10 @@ export const App: React.FC = () => {
               records={records}
               settings={settings}
               mode={studyMode}
+              initialIndex={sessionIndex}
+              initialStats={sessionStats}
+              initialCompleted={sessionCompleted}
+              onProgressUpdate={handleProgressUpdate}
               onRecordRecall={handleRecordRecall}
               onRevokeAndCorrect={handleRevokeAndCorrect}
               onToggleFavorite={handleToggleFavorite}
