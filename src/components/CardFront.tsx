@@ -1,6 +1,6 @@
 import React from 'react';
 import { Volume2, Star, Eye } from 'lucide-react';
-import { WordEntry, WordStudyRecord, UserSettings } from '../types';
+import { WordEntry, WordStudyRecord, UserSettings, StudyMode } from '../types';
 import { playWordPronunciation } from '../utils/sound';
 
 interface CardFrontProps {
@@ -9,6 +9,8 @@ interface CardFrontProps {
   settings: UserSettings;
   currentIndex: number;
   totalCards: number;
+  mode?: StudyMode;
+  selectedYear?: number;
   onReveal: () => void;
   onToggleFavorite: () => void;
 }
@@ -19,31 +21,50 @@ export const CardFront: React.FC<CardFrontProps> = ({
   settings,
   currentIndex,
   totalCards,
+  mode,
+  selectedYear,
   onReveal,
   onToggleFavorite,
 }) => {
   const isFavorite = record?.isFavorite || false;
   const examLabel = word.examSource === 'e1' ? '英语一' : '英语二';
 
+  // Find target or latest authentic exam year
+  const examYears = word.senses
+    .flatMap((s) => s.examples?.map((e) => e.year) || [])
+    .filter((y): y is number => Boolean(y));
+  const primaryYear = (selectedYear && examYears.includes(selectedYear))
+    ? selectedYear
+    : examYears.sort((a, b) => b - a)[0];
+
   return (
     <div className="w-full max-w-xl mx-auto bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl shadow-xs flex flex-col min-h-[340px] sm:min-h-[420px] p-4 sm:p-7 justify-between transition-colors">
       {/* Top Bar: Progress & Exam Source */}
       <div className="flex items-center justify-between text-xs text-stone-400 dark:text-stone-500">
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <span className="font-mono text-stone-800 dark:text-stone-200 bg-paper-100 dark:bg-paper-800 px-2 py-0.5 rounded text-[11px] font-semibold border border-paper-200 dark:border-paper-700">
             {currentIndex + 1} / {totalCards}
           </span>
           <span className="text-stone-500 dark:text-stone-400 text-[11px] font-medium">{examLabel}</span>
+
+          {primaryYear && (
+            <span className="bg-amber-100/80 dark:bg-amber-950/70 text-amber-900 dark:text-amber-200 px-1.5 py-0.5 rounded font-mono text-[10px] font-semibold border border-amber-200 dark:border-amber-900">
+              {primaryYear}年真题
+            </span>
+          )}
+
           {word.kaoyanRank && (
             <span className="bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 px-1.5 py-0.5 rounded font-mono text-[10px] font-bold tracking-tight">
               🔥高频 #{word.kaoyanRank}
             </span>
           )}
+
           {word.cefr && (
             <span className="bg-paper-100 dark:bg-paper-800 text-stone-700 dark:text-stone-300 px-1.5 py-0.5 rounded font-mono text-[10px] border border-paper-200 dark:border-paper-700">
               {word.cefr}
             </span>
           )}
+
           {settings.showFreqOnFront && word.totalFreq > 0 && !word.kaoyanRank && (
             <span className="bg-paper-100 dark:bg-paper-800 text-stone-600 dark:text-stone-400 px-1.5 py-0.5 rounded font-mono text-[10px]">
               考频 {word.totalFreq}次

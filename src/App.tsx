@@ -34,7 +34,7 @@ import {
   createDefaultStudyRecord 
 } from './engine/spacedRepetition';
 import { calculateCategoryStats } from './engine/categoryEngine';
-import { buildStudyQueue } from './engine/queueScheduler';
+import { buildStudyQueue, extractAvailableExamYears } from './engine/queueScheduler';
 import { 
   getStoredActiveSession, 
   saveActiveSession, 
@@ -73,6 +73,7 @@ export const App: React.FC = () => {
   };
 
   const [studyMode, setStudyMode] = useState<StudyMode>('mixed');
+  const [selectedYear, setSelectedYear] = useState<number>(2026);
   const [activeCategory, setActiveCategory] = useState<CategoryFilterKey>('all');
   const [customConfig, setCustomConfig] = useState<CustomDeckConfig | undefined>();
   
@@ -147,6 +148,9 @@ export const App: React.FC = () => {
 
           if (restoredQueue.length > 0) {
             setStudyMode(savedSession.mode || 'mixed');
+            if (savedSession.selectedYear) {
+              setSelectedYear(savedSession.selectedYear);
+            }
             setActiveCategory(savedSession.category || 'all');
             setCustomConfig(savedSession.customConfig);
             setSessionQueue(restoredQueue);
@@ -212,10 +216,20 @@ export const App: React.FC = () => {
     return calculateCategoryStats(pool, records);
   }, [words, records, settings.examFilter]);
 
+  // Extract available authentic exam years and word counts
+  const availableYears = useMemo(() => extractAvailableExamYears(words), [words]);
+
   // 3. Helper to generate a new session queue
   const generateNewSessionQueue = useCallback(
-    (modeToUse: StudyMode, configToUse?: CustomDeckConfig, customWords?: WordEntry[], catToUse?: CategoryFilterKey) => {
+    (
+      modeToUse: StudyMode, 
+      configToUse?: CustomDeckConfig, 
+      customWords?: WordEntry[], 
+      catToUse?: CategoryFilterKey,
+      yearToUse?: number
+    ) => {
       const activeCat = catToUse || activeCategory;
+      const yr = yearToUse !== undefined ? yearToUse : selectedYear;
       if (customWords) {
         setSessionQueue(customWords);
         setSessionIndex(0);
@@ -232,6 +246,7 @@ export const App: React.FC = () => {
           mode: modeToUse,
           category: activeCat,
           customConfig: configToUse,
+          selectedYear: yr,
           queueWordIds: customWords.map((w) => w.id),
           currentIndex: 0,
           stats: freshStats,
@@ -249,6 +264,7 @@ export const App: React.FC = () => {
         dailyReviewLimit: settings.dailyReviewLimit,
         examFilter: settings.examFilter,
         customConfig: configToUse,
+        selectedYear: yr,
         now: Date.now(),
       });
       setSessionQueue(q);
@@ -266,6 +282,7 @@ export const App: React.FC = () => {
         mode: modeToUse,
         category: activeCat,
         customConfig: configToUse,
+        selectedYear: yr,
         queueWordIds: q.map((w) => w.id),
         currentIndex: 0,
         stats: freshStats,
@@ -273,7 +290,7 @@ export const App: React.FC = () => {
         timestamp: Date.now(),
       });
     },
-    [words, records, settings, activeCategory]
+    [words, records, settings, activeCategory, selectedYear]
   );
 
   // Sync session progress from StudyDeck to localStorage
@@ -287,6 +304,7 @@ export const App: React.FC = () => {
         mode: studyMode,
         category: activeCategory,
         customConfig,
+        selectedYear,
         queueWordIds: sessionQueue.map((w) => w.id),
         currentIndex: index,
         stats,
@@ -294,14 +312,18 @@ export const App: React.FC = () => {
         timestamp: Date.now(),
       });
     },
-    [studyMode, activeCategory, customConfig, sessionQueue]
+    [studyMode, activeCategory, customConfig, sessionQueue, selectedYear]
   );
 
   // Re-generate session queue when mode changes
-  const handleSelectMode = (newMode: StudyMode) => {
+  const handleSelectMode = (newMode: StudyMode, year?: number) => {
+    const yr = year !== undefined ? year : selectedYear;
+    if (year !== undefined) {
+      setSelectedYear(year);
+    }
     setStudyMode(newMode);
     setCustomConfig(undefined);
-    generateNewSessionQueue(newMode, undefined);
+    generateNewSessionQueue(newMode, undefined, undefined, undefined, yr);
   };
 
   // Handle single word recall evaluation
@@ -442,6 +464,7 @@ export const App: React.FC = () => {
             dailyNewLimit: merged.dailyNewLimit,
             dailyReviewLimit: merged.dailyReviewLimit,
             examFilter: filterVal,
+            selectedYear,
             now: Date.now(),
           });
           setSessionQueue(q);
@@ -458,6 +481,7 @@ export const App: React.FC = () => {
           saveActiveSession({
             mode: studyMode,
             category: activeCategory,
+            selectedYear,
             queueWordIds: q.map((w) => w.id),
             currentIndex: 0,
             stats: freshStats,
@@ -468,7 +492,7 @@ export const App: React.FC = () => {
       }
       return merged;
     });
-  }, [words, records, studyMode, activeCategory]);
+  }, [words, records, studyMode, activeCategory, selectedYear]);
 
   // Category select
   const handleSelectCategory = (catKey: CategoryFilterKey) => {
@@ -507,6 +531,7 @@ export const App: React.FC = () => {
       saveActiveSession({
         mode: 'error',
         category: 'dont_know',
+        selectedYear,
         queueWordIds: subset.map((w) => w.id),
         currentIndex: 0,
         stats: freshStats,
@@ -534,6 +559,7 @@ export const App: React.FC = () => {
     saveActiveSession({
       mode: 'custom',
       category: 'all',
+      selectedYear,
       queueWordIds: slice.map((w) => w.id),
       currentIndex: 0,
       stats: freshStats,
@@ -578,6 +604,12 @@ export const App: React.FC = () => {
               currentMode={studyMode}
               onSelectMode={handleSelectMode}
               onStartCategorySession={handleSelectCategory}
+              availableYears={availableYears}
+              selectedYear={selectedYear}
+              onSelectYear={(yr) => {
+                setSelectedYear(yr);
+                handleSelectMode('year', yr);
+              }}
             />
 
             <StudyDeck
@@ -585,6 +617,7 @@ export const App: React.FC = () => {
               records={records}
               settings={settings}
               mode={studyMode}
+              selectedYear={selectedYear}
               initialIndex={sessionIndex}
               initialStats={sessionStats}
               initialCompleted={sessionCompleted}
@@ -592,7 +625,7 @@ export const App: React.FC = () => {
               onRecordRecall={handleRecordRecall}
               onRevokeAndCorrect={handleRevokeAndCorrect}
               onToggleFavorite={handleToggleFavorite}
-              onRestartSession={() => generateNewSessionQueue(studyMode, customConfig)}
+              onRestartSession={() => generateNewSessionQueue(studyMode, customConfig, undefined, undefined, selectedYear)}
               onRetryMistakes={handleRetryMistakes}
             />
           </div>

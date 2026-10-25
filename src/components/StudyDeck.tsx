@@ -11,6 +11,7 @@ interface StudyDeckProps {
   records: Record<string, WordStudyRecord>;
   settings: UserSettings;
   mode: StudyMode;
+  selectedYear?: number;
   initialIndex?: number;
   initialStats?: SessionStats;
   initialCompleted?: boolean;
@@ -33,6 +34,7 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
   records,
   settings,
   mode,
+  selectedYear,
   initialIndex = 0,
   initialStats,
   initialCompleted = false,
@@ -260,9 +262,9 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
   if (queue.length === 0) {
     return (
       <div className="w-full max-w-lg mx-auto my-12 bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl p-8 text-center space-y-4">
-        <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">当前分类无待学单词</h3>
+        <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">当前分类/年份无待学单词</h3>
         <p className="text-xs text-stone-500 dark:text-stone-400">
-          太棒了！当前选定的复习队列已全部清空，或您可以尝试切换其他模式或分类。
+          太棒了！当前选定的复习队列已全部清空，或您可以尝试切换其他年份或分类。
         </p>
         <button
           onClick={onRestartSession}
@@ -290,7 +292,7 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
             本轮学习已完成！
           </h2>
           <p className="text-[11px] text-stone-500 dark:text-stone-400">
-            高质量的主动回忆与纠错是掌握考研核心词的最快路径
+            {mode === 'year' && selectedYear ? `${selectedYear} 年考研真题考点背诵完成` : '高质量的主动回忆与纠错是掌握考研核心词的最快路径'}
           </p>
         </div>
 
@@ -388,6 +390,8 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
           settings={settings}
           currentIndex={currentIndex}
           totalCards={queue.length}
+          mode={mode}
+          selectedYear={selectedYear}
           onReveal={handleReveal}
           onToggleFavorite={() => onToggleFavorite(currentWord.id)}
         />
@@ -398,6 +402,7 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
           settings={settings}
           currentIndex={currentIndex}
           totalCards={queue.length}
+          selectedYear={selectedYear}
           lastRatingForThisCard={lastRating}
           hasCorrectedThisCard={hasCorrected}
           onSelectRating={handleRating}

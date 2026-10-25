@@ -10,7 +10,30 @@ export interface BuildQueueOptions {
   dailyReviewLimit: number;
   examFilter: 'e1' | 'e2' | 'all';
   customConfig?: CustomDeckConfig;
+  selectedYear?: number;
   now?: number;
+}
+
+/**
+ * 提取所有真题年份及各年份包含的独立考点单词数量
+ */
+export function extractAvailableExamYears(words: WordEntry[]): { year: number; count: number }[] {
+  const map = new Map<number, Set<string>>();
+  for (const w of words) {
+    for (const s of w.senses) {
+      if (s.examples) {
+        for (const ex of s.examples) {
+          if (ex.year) {
+            if (!map.has(ex.year)) map.set(ex.year, new Set());
+            map.get(ex.year)!.add(w.id);
+          }
+        }
+      }
+    }
+  }
+  return Array.from(map.entries())
+    .map(([year, set]) => ({ year, count: set.size }))
+    .sort((a, b) => b.year - a.year);
 }
 
 export function buildStudyQueue(options: BuildQueueOptions): WordEntry[] {
@@ -22,6 +45,7 @@ export function buildStudyQueue(options: BuildQueueOptions): WordEntry[] {
     dailyReviewLimit,
     examFilter,
     customConfig,
+    selectedYear,
     now = Date.now(),
   } = options;
 
@@ -33,6 +57,44 @@ export function buildStudyQueue(options: BuildQueueOptions): WordEntry[] {
 
   // 2. 根据不同学习模式构建队列
   switch (mode) {
+    case 'year': {
+      const targetYear = selectedYear || 2026;
+      // 筛选在指定年份真题中出现过考点例句的单词
+      const yearWords = pool.filter((w) =>
+        w.senses.some((s) => s.examples && s.examples.some((ex) => ex.year === targetYear))
+      );
+
+      // 排序优先级：
+      // 1. 本年份错词 (不认识、记错、不熟悉)
+      // 2. 本年份未学词 (按考频降序)
+      // 3. 本年份已学温习词 (按考频降序)
+      const errorWords: WordEntry[] = [];
+      const unstudiedWords: WordEntry[] = [];
+      const reviewedWords: WordEntry[] = [];
+
+      for (const w of yearWords) {
+        const rec = records[w.id];
+        if (!rec || !rec.firstStudyTime) {
+          unstudiedWords.push(w);
+        } else if (
+          wordMatchesCategory(w, rec, 'recently_mistaken', now) ||
+          wordMatchesCategory(w, rec, 'dont_know', now) ||
+          wordMatchesCategory(w, rec, 'unfamiliar', now)
+        ) {
+          errorWords.push(w);
+        } else {
+          reviewedWords.push(w);
+        }
+      }
+
+      errorWords.sort((a, b) => b.totalFreq - a.totalFreq);
+      unstudiedWords.sort((a, b) => b.totalFreq - a.totalFreq);
+      reviewedWords.sort((a, b) => b.totalFreq - a.totalFreq);
+
+      const combined = [...errorWords, ...unstudiedWords, ...reviewedWords];
+      return combined.slice(0, Math.max(30, dailyReviewLimit));
+    }
+
     case 'new': {
       // 仅从未学习过的单词中提取，按真题考频从高到低排序，限制每日上限
       const unstudied = pool
@@ -103,6 +165,12 @@ export function buildStudyQueue(options: BuildQueueOptions): WordEntry[] {
       let matched = pool.filter(
         (w) => w.totalFreq >= customConfig.minFreq && w.totalFreq <= customConfig.maxFreq
       );
+
+      if (customConfig.selectedYear) {
+        matched = matched.filter((w) =>
+          w.senses.some((s) => s.examples && s.examples.some((ex) => ex.year === customConfig.selectedYear))
+        );
+      }
 
       if (customConfig.selectedCategories && customConfig.selectedCategories.length > 0) {
         matched = matched.filter((w) => {

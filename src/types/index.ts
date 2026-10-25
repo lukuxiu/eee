@@ -88,6 +88,7 @@ export type StudyMode =
   | 'due'      // 到期复习
   | 'error'    // 错词强化
   | 'mixed'    // 混合测试 (逾期 > 记错 > 到期 > 新词 > 抽查)
+  | 'year'     // 分年份真题背诵 (按考研真题年份逐年强化)
   | 'custom'   // 自定义组卷
   | 'context'; // 真题例句语境主动回忆
 
@@ -105,7 +106,7 @@ export type CategoryFilterKey =
   | 'context_weak'        // 真题语境薄弱
   | 'high_freq_weak'      // 高频词薄弱
   | 'favorite'            // 收藏单词
-  | string;               // 自定义分类 "custom:分类名"
+  | string;               // 自定义分类 "custom:分类名" 或 "year:年份"
 
 export interface UserSettings {
   examFilter: 'e1' | 'e2' | 'all'; // 题库开关：英语一 / 英语二 / 合并
@@ -123,6 +124,7 @@ export interface CustomDeckConfig {
   minFreq: number;
   maxFreq: number;
   selectedCategories: string[];
+  selectedYear?: number;    // 指定考研年份
   limit: number;
   mixOldWordsRatio: number; // 0.0 - 1.0 (混入已学词比例)
   examSource: 'e1' | 'e2' | 'all';

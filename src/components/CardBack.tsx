@@ -9,6 +9,7 @@ interface CardBackProps {
   settings: UserSettings;
   currentIndex: number;
   totalCards: number;
+  selectedYear?: number;
   lastRatingForThisCard?: RecallRating | null;
   hasCorrectedThisCard: boolean;
   onSelectRating: (rating: RecallRating) => void;
@@ -23,6 +24,7 @@ export const CardBack: React.FC<CardBackProps> = ({
   settings,
   currentIndex,
   totalCards,
+  selectedYear,
   lastRatingForThisCard,
   hasCorrectedThisCard,
   onSelectRating,
@@ -56,11 +58,12 @@ export const CardBack: React.FC<CardBackProps> = ({
     <div className="w-full max-w-xl mx-auto bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl shadow-xs flex flex-col p-4 sm:p-7 space-y-4 transition-colors">
       {/* Top Bar: Progress, Meta, Favorite */}
       <div className="flex items-center justify-between text-xs text-stone-400 dark:text-stone-500 border-b border-paper-100 dark:border-paper-800 pb-2.5">
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <span className="font-mono text-stone-800 dark:text-stone-200 bg-paper-100 dark:bg-paper-800 px-2 py-0.5 rounded text-[11px] font-semibold border border-paper-200 dark:border-paper-700">
             {currentIndex + 1} / {totalCards}
           </span>
           <span className="text-stone-500 dark:text-stone-400 text-[11px] font-medium">{examLabel}</span>
+
           {word.kaoyanRank && (
             <span className="bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 px-1.5 py-0.5 rounded font-mono text-[10px] font-bold tracking-tight">
               🔥高频 #{word.kaoyanRank}
@@ -165,20 +168,35 @@ export const CardBack: React.FC<CardBackProps> = ({
 
               {/* Authentic Sentence */}
               {sense.examples && sense.examples.length > 0 ? (
-                <div className="space-y-1 pl-3 border-l-2 border-paper-200 dark:border-paper-700 text-xs">
-                  {sense.examples.map((ex, exIdx) => (
-                    <div key={ex.id || exIdx} className="space-y-0.5">
-                      <p className="text-stone-800 dark:text-stone-200 leading-relaxed font-serif text-[11px] sm:text-xs">
-                        {highlightWordInSentence(ex.sentence, word.word)}
-                      </p>
-                      <p className="text-stone-500 dark:text-stone-400 leading-relaxed text-[11px]">
-                        {ex.translation}
-                      </p>
-                      <p className="text-[9px] text-stone-400 dark:text-stone-500 font-mono">
-                        {ex.source}
-                      </p>
-                    </div>
-                  ))}
+                <div className="space-y-1.5 pl-3 border-l-2 border-paper-200 dark:border-paper-700 text-xs">
+                  {sense.examples.map((ex, exIdx) => {
+                    const isTargetYear = selectedYear && ex.year === selectedYear;
+                    return (
+                      <div
+                        key={ex.id || exIdx}
+                        className={`space-y-0.5 p-1 rounded transition-colors ${
+                          isTargetYear
+                            ? 'bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200/60 dark:border-amber-900/40'
+                            : ''
+                        }`}
+                      >
+                        <p className="text-stone-800 dark:text-stone-200 leading-relaxed font-serif text-[11px] sm:text-xs">
+                          {highlightWordInSentence(ex.sentence, word.word)}
+                        </p>
+                        <p className="text-stone-500 dark:text-stone-400 leading-relaxed text-[11px]">
+                          {ex.translation}
+                        </p>
+                        <p className="text-[9px] text-stone-400 dark:text-stone-500 font-mono flex items-center gap-1">
+                          {isTargetYear && (
+                            <span className="bg-amber-200 dark:bg-amber-900 text-amber-900 dark:text-amber-200 px-1 py-0.2 rounded font-bold font-sans">
+                              🎯 {selectedYear}考点原句
+                            </span>
+                          )}
+                          <span>{ex.source}</span>
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               ) : null}
             </div>

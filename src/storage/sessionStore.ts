@@ -1,4 +1,4 @@
-import { StudyMode, CategoryFilterKey, CustomDeckConfig, WordEntry, RecallRating } from '../types';
+import { StudyMode, CategoryFilterKey, CustomDeckConfig } from '../types';
 
 export interface SessionStats {
   know: number;
@@ -12,6 +12,7 @@ export interface ActiveSessionData {
   mode: StudyMode;
   category: CategoryFilterKey;
   customConfig?: CustomDeckConfig;
+  selectedYear?: number;
   queueWordIds: string[];
   currentIndex: number;
   stats: SessionStats;
