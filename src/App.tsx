@@ -20,7 +20,6 @@ import { SettingsModal } from './components/SettingsModal';
 import { AlgorithmModal } from './components/AlgorithmModal';
 import { VisitDock, VisitRecord } from './components/VisitDock';
 import { WordDetailModal } from './components/WordDetailModal';
-import { PWAInstallBanner } from './components/PWAInstallBanner';
 
 import { 
   getAllStudyRecords, 
@@ -381,8 +380,6 @@ export const App: React.FC = () => {
         totalWordsCount={words.length}
       />
 
-      <PWAInstallBanner />
-
       <main className="flex-1 max-w-5xl w-full mx-auto px-3 sm:px-4 py-3 sm:py-6 space-y-3 sm:space-y-6 pb-24 md:pb-12">
         {currentTab === 'study' && (
           <div className="space-y-3 sm:space-y-5">
@@ -455,7 +452,7 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="border-t border-paper-200 dark:border-paper-850 bg-white dark:bg-paper-900 py-4 text-center text-[11px] text-stone-400 font-mono transition-colors">
-        考研英语单词主动回忆与智能复习系统 · 基于纯净版考研单词大观 · SM-2 动态间隔重复 · 离线 PWA 支持
+        考研英语单词主动回忆与智能复习系统 · 基于纯净版考研单词大观 · SM-2 动态间隔重复
       </footer>
 
       {/* Modals */}

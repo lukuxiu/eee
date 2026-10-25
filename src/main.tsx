@@ -3,22 +3,20 @@ import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import './index.css';
 
-// Service Worker Management:
-// In production, register sw.js; in development on localhost, clean up any service worker to avoid Vite HMR conflicts
+// Completely unregister and remove any existing service workers & caches
 if ('serviceWorker' in navigator) {
-  if (import.meta.env.DEV) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (const registration of registrations) {
-        registration.unregister();
-      }
-    });
-  } else {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').catch((err) => {
-        console.warn('[PWA] SW register skipped:', err);
-      });
-    });
-  }
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+if ('caches' in window) {
+  caches.keys().then((keys) => {
+    for (const key of keys) {
+      caches.delete(key);
+    }
+  });
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
