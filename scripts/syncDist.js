@@ -19,10 +19,11 @@ function copyDir(src, dest) {
 }
 
 try {
-  copyDir('dist/assets', 'assets');
-  copyDir('dist/data', 'data');
+  if (fs.existsSync('docs')) {
+    fs.rmSync('docs', { recursive: true, force: true });
+  }
   copyDir('dist', 'docs');
-  console.log('Successfully synced dist to assets, data, and docs.');
+  console.log('Successfully synced dist to docs.');
 } catch (err) {
-  console.warn('Sync dist warning:', err);
+  console.warn('Sync docs warning:', err);
 }
