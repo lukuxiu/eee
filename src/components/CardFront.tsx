@@ -29,7 +29,7 @@ export const CardFront: React.FC<CardFrontProps> = ({
   const isFavorite = record?.isFavorite || false;
   const examLabel = word.examSource === 'e1' ? '英语一' : '英语二';
 
-  // Find target or latest authentic exam year
+  // 提取所属目标年份或最新真题年份
   const examYears = word.senses
     .flatMap((s) => s.examples?.map((e) => e.year) || [])
     .filter((y): y is number => Boolean(y));
@@ -38,8 +38,19 @@ export const CardFront: React.FC<CardFrontProps> = ({
     : examYears.sort((a, b) => b - a)[0];
 
   return (
-    <div className="w-full max-w-xl mx-auto bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl shadow-xs flex flex-col min-h-[340px] sm:min-h-[420px] p-4 sm:p-7 justify-between transition-colors">
-      {/* Top Bar: Progress & Exam Source */}
+    <div
+      onClick={onReveal}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onReveal();
+        }
+      }}
+      className="w-full max-w-xl mx-auto bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 hover:border-stone-400 dark:hover:border-stone-600 rounded-xl shadow-xs hover:shadow-sm flex flex-col min-h-[340px] sm:min-h-[420px] p-4 sm:p-7 justify-between transition-all cursor-pointer select-none group focus:outline-none focus:ring-2 focus:ring-stone-400/50"
+    >
+      {/* 顶部栏：学习进度与真题归属标签 */}
       <div className="flex items-center justify-between text-xs text-stone-400 dark:text-stone-500">
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <span className="font-mono text-stone-800 dark:text-stone-200 bg-paper-100 dark:bg-paper-800 px-2 py-0.5 rounded text-[11px] font-semibold border border-paper-200 dark:border-paper-700">
@@ -88,9 +99,9 @@ export const CardFront: React.FC<CardFrontProps> = ({
         </button>
       </div>
 
-      {/* Center: English Word, Phonetics, Audio */}
+      {/* 中心主体：单词英文拼写、音标与发音，点击卡片任意区域均可揭晓 */}
       <div className="flex flex-col items-center justify-center my-auto py-6 sm:py-10 text-center select-none">
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-stone-900 dark:text-stone-100 font-serif">
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-stone-900 dark:text-stone-100 font-serif group-hover:scale-[1.01] transition-transform">
           {word.word}
         </h2>
 
@@ -110,21 +121,20 @@ export const CardFront: React.FC<CardFrontProps> = ({
           </div>
         )}
 
-        <p className="mt-5 text-[11px] text-stone-400 dark:text-stone-500 max-w-xs leading-relaxed">
-          先主动回忆中文释义与真题考法，再揭晓答案
+        <p className="mt-5 text-[11px] text-stone-400 dark:text-stone-500 max-w-xs leading-relaxed group-hover:text-stone-600 dark:group-hover:text-stone-300 transition-colors">
+          点击词卡任意处或按 [空格] 查看释义与例句
         </p>
       </div>
 
-      {/* Bottom: Reveal Button */}
+      {/* 底部醒目标签条：直观提示点击或空格即可翻转 */}
       <div className="pt-2">
-        <button
-          onClick={onReveal}
-          className="w-full py-3 sm:py-3.5 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 rounded-lg font-medium text-xs sm:text-sm flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-xs"
+        <div
+          className="w-full py-3 sm:py-3.5 bg-stone-900 group-hover:bg-stone-800 dark:bg-stone-100 dark:group-hover:bg-white text-white dark:text-stone-900 rounded-lg font-medium text-xs sm:text-sm flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-xs"
         >
           <Eye className="w-4 h-4" />
-          <span>揭晓释义与例句</span>
-          <span className="text-stone-400 dark:text-stone-500 text-xs font-mono ml-0.5 hidden sm:inline">[Space]</span>
-        </button>
+          <span>点击词卡查看释义例句</span>
+          <span className="text-stone-400 dark:text-stone-500 text-xs font-mono ml-0.5 hidden sm:inline">[Space / Click]</span>
+        </div>
       </div>
     </div>
   );

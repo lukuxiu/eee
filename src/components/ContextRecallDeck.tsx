@@ -81,7 +81,7 @@ export const ContextRecallDeck: React.FC<ContextRecallDeckProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
-      if (e.code === 'Space') {
+      if (e.code === 'Space' || e.code === 'Enter') {
         e.preventDefault();
         if (!isRevealed) {
           setIsRevealed(true);
@@ -201,7 +201,12 @@ export const ContextRecallDeck: React.FC<ContextRecallDeckProps> = ({
       </div>
 
       {/* Main Context Card */}
-      <div className="bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl shadow-xs p-4 sm:p-7 space-y-4 transition-colors">
+      <div 
+        onClick={() => !isRevealed && setIsRevealed(true)}
+        className={`bg-white dark:bg-paper-900 border border-paper-200 dark:border-paper-800 rounded-xl shadow-xs p-4 sm:p-7 space-y-4 transition-colors ${
+          !isRevealed ? 'cursor-pointer hover:border-stone-400 dark:hover:border-stone-600' : ''
+        }`}
+      >
         {/* Context Prompt */}
         <div className="space-y-2">
           <div className="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">

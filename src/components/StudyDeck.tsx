@@ -229,7 +229,7 @@ export const StudyDeck: React.FC<StudyDeckProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
-      if (e.code === 'Space') {
+      if (e.code === 'Space' || e.code === 'Enter') {
         e.preventDefault();
         if (!isRevealed) {
           handleReveal();
