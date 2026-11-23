@@ -12,13 +12,14 @@ import {
   X,
   Sun,
   Moon,
-  Download
+  Download,
+  Zap
 } from 'lucide-react';
-import { UserSettings } from '../types';
+import { UserSettings, AppTab } from '../types';
 
 interface HeaderProps {
-  currentTab: 'study' | 'context' | 'words' | 'stats';
-  onSelectTab: (tab: 'study' | 'context' | 'words' | 'stats') => void;
+  currentTab: AppTab;
+  onSelectTab: (tab: AppTab) => void;
   settings: UserSettings;
   onUpdateSettings: (newSettings: Partial<UserSettings>) => void;
   onOpenCustomDeck: () => void;
@@ -127,6 +128,18 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <BookOpen className="w-3.5 h-3.5" />
               卡片复习
+            </button>
+
+            <button
+              onClick={() => onSelectTab('sprint')}
+              className={`px-3 py-1.5 rounded flex items-center gap-1.5 transition-colors ${
+                currentTab === 'sprint'
+                  ? 'bg-amber-100/90 dark:bg-amber-950/70 text-amber-950 dark:text-amber-200 font-semibold border border-amber-300/70 dark:border-amber-800/70'
+                  : 'text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/40'
+              }`}
+            >
+              <Zap className="w-3.5 h-3.5" />
+              考前冲刺
             </button>
 
             <button
@@ -307,12 +320,22 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-paper-50/95 dark:bg-paper-950/95 backdrop-blur-md border-t border-paper-200 dark:border-paper-850 py-1 flex items-center justify-around shadow-sm">
         <button
           onClick={() => onSelectTab('study')}
-          className={`flex flex-col items-center py-1 px-3 ${
+          className={`flex flex-col items-center py-1 px-2 ${
             currentTab === 'study' ? 'text-stone-900 dark:text-stone-100 font-bold' : 'text-stone-400'
           }`}
         >
           <BookOpen className="w-4 h-4 mb-0.5" />
           <span className="text-[10px]">卡片复习</span>
+        </button>
+
+        <button
+          onClick={() => onSelectTab('sprint')}
+          className={`flex flex-col items-center py-1 px-2 ${
+            currentTab === 'sprint' ? 'text-amber-600 dark:text-amber-400 font-bold' : 'text-amber-600/80 dark:text-amber-400/80'
+          }`}
+        >
+          <Zap className="w-4 h-4 mb-0.5" />
+          <span className="text-[10px]">考前冲刺</span>
         </button>
 
         <button

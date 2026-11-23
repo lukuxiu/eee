@@ -83,12 +83,15 @@ export interface WordStudyRecord {
   contextErrorCount: number;   // 真题语境测试错误次数
 }
 
+export type AppTab = 'study' | 'sprint' | 'context' | 'words' | 'stats';
+
 export type StudyMode = 
   | 'new'      // 新词速刷
   | 'due'      // 到期复习
   | 'error'    // 错词强化
   | 'mixed'    // 混合测试 (逾期 > 记错 > 到期 > 新词 > 抽查)
   | 'year'     // 分年份真题背诵 (按考研真题年份逐年强化)
+  | 'sprint'   // 考前冲刺极速复习
   | 'custom'   // 自定义组卷
   | 'context'; // 真题例句语境主动回忆
 

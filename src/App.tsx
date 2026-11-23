@@ -6,11 +6,13 @@ import {
   CategoryFilterKey, 
   StudyMode, 
   RecallRating,
-  CustomDeckConfig 
+  CustomDeckConfig,
+  AppTab
 } from './types';
 import { Header } from './components/Header';
 import { CategoryNav } from './components/CategoryNav';
 import { StudyDeck } from './components/StudyDeck';
+import { SprintReviewBoard } from './components/SprintReviewBoard';
 import { ContextRecallDeck } from './components/ContextRecallDeck';
 import { WordListModal } from './components/WordListModal';
 import { StatsDashboard } from './components/StatsDashboard';
@@ -66,8 +68,8 @@ export const App: React.FC = () => {
   const [inspectingWord, setInspectingWord] = useState<WordEntry | null>(null);
 
   // Navigation State with tab persistence
-  const [currentTab, setCurrentTabState] = useState<'study' | 'context' | 'words' | 'stats'>(() => getStoredTab());
-  const setCurrentTab = (tab: 'study' | 'context' | 'words' | 'stats') => {
+  const [currentTab, setCurrentTabState] = useState<AppTab>(() => getStoredTab());
+  const setCurrentTab = (tab: AppTab) => {
     setCurrentTabState(tab);
     saveStoredTab(tab);
   };
@@ -570,6 +572,15 @@ export const App: React.FC = () => {
     setCurrentTab('study');
   };
 
+  // Launch a targeted sprint batch directly into StudyDeck
+  const handleStartSprintDeck = (deckWords: WordEntry[]) => {
+    if (!deckWords || deckWords.length === 0) return;
+    setStudyMode('sprint');
+    setCustomConfig(undefined);
+    generateNewSessionQueue('sprint', undefined, deckWords, 'all', selectedYear);
+    setCurrentTab('study');
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-paper-50 dark:bg-paper-950 flex flex-col items-center justify-center p-4">
@@ -611,6 +622,7 @@ export const App: React.FC = () => {
                 setSelectedYear(yr);
                 handleSelectMode('year', yr);
               }}
+              onOpenSprintBoard={() => setCurrentTab('sprint')}
             />
 
             <StudyDeck
@@ -630,6 +642,18 @@ export const App: React.FC = () => {
               onRetryMistakes={handleRetryMistakes}
             />
           </div>
+        )}
+
+        {currentTab === 'sprint' && (
+          <SprintReviewBoard
+            words={words}
+            records={records}
+            settings={settings}
+            onQuickRate={handleRecordRecall}
+            onToggleFavorite={handleToggleFavorite}
+            onStartSprintDeck={handleStartSprintDeck}
+            onInspectWord={(w) => setInspectingWord(w)}
+          />
         )}
 
         {currentTab === 'context' && (

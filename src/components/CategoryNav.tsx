@@ -15,7 +15,8 @@ import {
   ChevronDown, 
   X, 
   Filter,
-  Calendar
+  Calendar,
+  Zap
 } from 'lucide-react';
 
 interface CategoryNavProps {
@@ -28,6 +29,7 @@ interface CategoryNavProps {
   availableYears?: { year: number; count: number }[];
   selectedYear?: number;
   onSelectYear?: (year: number) => void;
+  onOpenSprintBoard?: () => void;
 }
 
 export const CategoryNav: React.FC<CategoryNavProps> = ({
@@ -40,12 +42,14 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
   availableYears = [],
   selectedYear = 2026,
   onSelectYear,
+  onOpenSprintBoard,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const getModeLabel = (mode: StudyMode) => {
     switch (mode) {
       case 'mixed': return '综合推荐复习';
+      case 'sprint': return '考前极速冲刺';
       case 'year': return `${selectedYear} 年真题考点`;
       case 'due': return '到期与逾期复习';
       case 'error': return '错词集中强化';
@@ -118,6 +122,17 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
                 </option>
               ))}
             </select>
+          )}
+
+          {onOpenSprintBoard && (
+            <button
+              onClick={onOpenSprintBoard}
+              className="text-[11px] text-amber-800 dark:text-amber-300 hover:bg-amber-100/80 dark:hover:bg-amber-950/70 flex items-center gap-1 font-semibold bg-amber-50 dark:bg-amber-950/40 px-2 py-1 rounded border border-amber-200 dark:border-amber-800/70 transition-colors shrink-0"
+              title="进入考前 30 天极速过词冲刺板块"
+            >
+              <Zap className="w-3 h-3 text-amber-600 dark:text-amber-400" />
+              <span className="hidden sm:inline">考前冲刺</span>
+            </button>
           )}
 
           <button
@@ -215,6 +230,24 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
                 >
                   <div className="font-bold">错词强化</div>
                   <div className="text-[10px] opacity-70 mt-0.5">近期记错 + 反复出错重点复核</div>
+                </button>
+
+                <button
+                  onClick={() => {
+                    onSelectMode('sprint');
+                    setIsModalOpen(false);
+                  }}
+                  className={`p-2.5 rounded-lg border text-left transition-all ${
+                    currentMode === 'sprint'
+                      ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 border-stone-900 dark:border-stone-100 shadow-xs'
+                      : 'bg-amber-50/70 dark:bg-amber-950/30 hover:bg-amber-100/70 text-stone-800 dark:text-stone-200 border-amber-200 dark:border-amber-800/70'
+                  }`}
+                >
+                  <div className="font-bold flex items-center gap-1">
+                    <Zap className="w-3.5 h-3.5 text-amber-500" />
+                    <span>考前极速冲刺</span>
+                  </div>
+                  <div className="text-[10px] opacity-70 mt-0.5">错词 + 1199 高频盲区抢分</div>
                 </button>
 
                 <button

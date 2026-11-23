@@ -57,6 +57,39 @@ export function buildStudyQueue(options: BuildQueueOptions): WordEntry[] {
 
   // 2. 根据不同学习模式构建队列
   switch (mode) {
+    case 'sprint': {
+      // 考前冲刺模式：错词 > 1199 高频未掌握词 > 其他未掌握高频词
+      const sprintMistakes: WordEntry[] = [];
+      const sprintHighFreq: WordEntry[] = [];
+      const sprintOthers: WordEntry[] = [];
+
+      for (const w of pool) {
+        const rec = records[w.id];
+        if (rec && rec.masteryLevel >= 4) continue;
+        if (
+          rec &&
+          (wordMatchesCategory(w, rec, 'recently_mistaken', now) ||
+            wordMatchesCategory(w, rec, 'dont_know', now) ||
+            wordMatchesCategory(w, rec, 'unfamiliar', now))
+        ) {
+          sprintMistakes.push(w);
+        } else if (w.isHighFreq1199 || (w.kaoyanRank !== undefined && w.kaoyanRank <= 1199)) {
+          sprintHighFreq.push(w);
+        } else {
+          sprintOthers.push(w);
+        }
+      }
+
+      sprintMistakes.sort((a, b) => b.totalFreq - a.totalFreq);
+      sprintHighFreq.sort((a, b) => (a.kaoyanRank ?? 9999) - (b.kaoyanRank ?? 9999));
+      sprintOthers.sort((a, b) => b.totalFreq - a.totalFreq);
+
+      return [...sprintMistakes, ...sprintHighFreq, ...sprintOthers].slice(
+        0,
+        Math.max(40, dailyReviewLimit)
+      );
+    }
+
     case 'year': {
       const targetYear = selectedYear || 2026;
       // 筛选在指定年份真题中出现过考点例句的单词
