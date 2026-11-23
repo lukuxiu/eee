@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Volume2, Star, RotateCcw, AlertTriangle, History, ArrowRight } from 'lucide-react';
 import { WordEntry, WordStudyRecord, UserSettings, RecallRating, ExamSentence } from '../types';
 import { playWordPronunciation } from '../utils/sound';
+import { mergeSensesByPos } from '../utils/senseFormatter';
 
 interface CardBackProps {
   word: WordEntry;
@@ -35,12 +36,12 @@ export const CardBack: React.FC<CardBackProps> = ({
   const isFavorite = record?.isFavorite || false;
   const examLabel = word.examSource === 'e1' ? '英语一' : '英语二';
 
-  // 1. 按照真题考查频次降序排序所有词义（最高频释义排在最前）
-  const sortedSenses = useMemo(() => {
-    return [...word.senses].sort((a, b) => (b.freq || 0) - (a.freq || 0));
+  // 1. 按词性合并释义、去重并按考频降序排列
+  const mergedPosGroups = useMemo(() => {
+    return mergeSensesByPos(word.senses);
   }, [word.senses]);
 
-  // 2. 汇总提取所有考研例句（放在释义下方，并优先置顶当年考点例句）
+  // 2. 汇总提取所有考研例句（去重，放在释义下方，优先置顶当年考点例句）
   const allExamples = useMemo(() => {
     const list: {
       ex: ExamSentence;
@@ -48,15 +49,18 @@ export const CardBack: React.FC<CardBackProps> = ({
       sensePos: string;
       freq?: number;
     }[] = [];
+    const seenSentences = new Set<string>();
 
-    for (const sense of sortedSenses) {
-      if (sense.examples && sense.examples.length > 0) {
-        for (const ex of sense.examples) {
+    for (const group of mergedPosGroups) {
+      for (const item of group.items) {
+        for (const ex of item.examples) {
+          if (seenSentences.has(ex.sentence)) continue;
+          seenSentences.add(ex.sentence);
           list.push({
             ex,
-            senseDef: sense.definition,
-            sensePos: sense.pos,
-            freq: sense.freq,
+            senseDef: item.definition,
+            sensePos: group.pos,
+            freq: item.freq,
           });
         }
       }
@@ -71,7 +75,7 @@ export const CardBack: React.FC<CardBackProps> = ({
     }
 
     return list;
-  }, [sortedSenses, selectedYear]);
+  }, [mergedPosGroups, selectedYear]);
 
   // 高亮例句中的核心考点生词
   const highlightWordInSentence = (sentence: string, targetWord: string) => {
@@ -248,36 +252,46 @@ export const CardBack: React.FC<CardBackProps> = ({
         </div>
       )}
 
-      {/* 🌟 核心布局调整 2：按照考频将意思集中写在前面，右侧标注精准考频 */}
+      {/* 🌟 核心布局调整 2：同词性合并去重，按考频降序紧凑排布 */}
       <div className="space-y-2">
         <div className="flex items-center justify-between text-[11px] font-semibold text-stone-500 dark:text-stone-400">
-          <span>考研真题释义（按考查频次降序）</span>
+          <span>考研真题释义（同词性已合并 · 按考频降序）</span>
           <span className="text-[10px] font-mono text-stone-400 dark:text-stone-500">
-            共 {sortedSenses.length} 条释义
+            {mergedPosGroups.length} 个词性
           </span>
         </div>
 
-        <div className="bg-paper-50/60 dark:bg-paper-950/30 border border-paper-200/80 dark:border-paper-800 rounded-lg p-2.5 sm:p-3 space-y-2">
-          {sortedSenses.map((sense, idx) => (
-            <div key={sense.id || idx} className="flex items-baseline justify-between gap-2 text-xs">
-              <div className="flex items-baseline gap-1.5 min-w-0 flex-1">
-                <span className="font-mono text-stone-400 dark:text-stone-500 text-[10px] w-3.5 text-right flex-shrink-0">
-                  {idx + 1}.
+        <div className="bg-paper-50/60 dark:bg-paper-950/30 border border-paper-200/80 dark:border-paper-800 rounded-lg divide-y divide-paper-200/60 dark:divide-paper-800/80">
+          {mergedPosGroups.map((group) => (
+            <div
+              key={group.pos}
+              className="px-3 py-2.5 flex items-start justify-between gap-2.5 text-xs"
+            >
+              <div className="flex items-baseline gap-2 min-w-0 flex-1">
+                <span className="font-serif italic font-semibold text-stone-700 dark:text-stone-200 bg-paper-200/70 dark:bg-paper-800 px-1.5 py-0.5 rounded text-[11px] min-w-[42px] text-center flex-shrink-0">
+                  {group.pos}
                 </span>
-                {sense.pos && (
-                  <span className="font-serif italic font-semibold text-stone-700 dark:text-stone-300 bg-paper-100 dark:bg-paper-800 px-1 py-0.2 rounded text-[10px] flex-shrink-0">
-                    {sense.pos}
-                  </span>
-                )}
-                <span className="font-medium text-stone-900 dark:text-stone-100 leading-snug">
-                  {sense.definition}
-                </span>
+                <div className="leading-relaxed text-stone-900 dark:text-stone-100 font-medium break-words">
+                  {group.items.map((item, i) => (
+                    <React.Fragment key={item.id || i}>
+                      {i > 0 && (
+                        <span className="text-stone-300 dark:text-stone-600 mx-1.5 select-none">·</span>
+                      )}
+                      <span>{item.definition}</span>
+                      {item.freq > 0 && (
+                        <span className="ml-1 text-[10px] font-mono text-amber-700 dark:text-amber-300">
+                          ({item.freq}次)
+                        </span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
-              {sense.freq !== undefined && sense.freq > 0 ? (
-                <span className="flex-shrink-0 text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200/60 dark:border-amber-900/40 whitespace-nowrap">
-                  考频 {sense.freq}次
+              {group.totalFreq > 0 && (
+                <span className="flex-shrink-0 text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200/60 dark:border-amber-900/40 whitespace-nowrap mt-0.5">
+                  {group.items.length > 1 ? `共 ${group.totalFreq}次` : `考频 ${group.totalFreq}次`}
                 </span>
-              ) : null}
+              )}
             </div>
           ))}
         </div>

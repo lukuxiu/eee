@@ -2,6 +2,7 @@ import React from 'react';
 import { WordEntry, WordStudyRecord } from '../types';
 import { X, Volume2, Star, History, RotateCcw } from 'lucide-react';
 import { playWordPronunciation } from '../utils/sound';
+import { mergeSensesByPos } from '../utils/senseFormatter';
 
 interface WordDetailModalProps {
   word: WordEntry | null;
@@ -23,6 +24,25 @@ export const WordDetailModal: React.FC<WordDetailModalProps> = ({
   onStartStudyWithWord,
 }) => {
   if (!isOpen || !word) return null;
+
+  const mergedGroups = mergeSensesByPos(word.senses);
+  const dedupedExamples: { sentence: string; translation: string; source: string; pos: string; def: string }[] = [];
+  const seenEx = new Set<string>();
+  for (const g of mergedGroups) {
+    for (const item of g.items) {
+      for (const ex of item.examples) {
+        if (seenEx.has(ex.sentence)) continue;
+        seenEx.add(ex.sentence);
+        dedupedExamples.push({
+          sentence: ex.sentence,
+          translation: ex.translation,
+          source: ex.source,
+          pos: g.pos,
+          def: item.definition,
+        });
+      }
+    }
+  }
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
@@ -84,53 +104,69 @@ export const WordDetailModal: React.FC<WordDetailModalProps> = ({
             </div>
           )}
 
-          {/* Senses and Examples */}
-          <div className="space-y-3">
+          {/* Merged Senses by POS */}
+          <div className="space-y-2">
             <div className="text-xs font-semibold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
-              全部考研已考词义与真题原句 ({word.senses.length})
+              考研真题释义（同词性已合并 · 按考频降序）
             </div>
 
-            <div className="space-y-3">
-              {word.senses.map((sense, idx) => (
-                <div key={sense.id || idx} className="p-3 bg-paper-50 dark:bg-paper-850 rounded border border-paper-200 dark:border-paper-800 space-y-2">
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-xs font-bold text-stone-400">
-                      {idx + 1}.
+            <div className="bg-paper-50 dark:bg-paper-850 rounded-lg border border-paper-200 dark:border-paper-800 divide-y divide-paper-200/60 dark:divide-paper-800">
+              {mergedGroups.map((group) => (
+                <div key={group.pos} className="p-3 flex items-start justify-between gap-2.5 text-xs">
+                  <div className="flex items-baseline gap-2 min-w-0 flex-1">
+                    <span className="text-[11px] font-serif italic font-semibold text-stone-700 dark:text-stone-200 bg-paper-200/70 dark:bg-paper-800 px-1.5 py-0.5 rounded min-w-[42px] text-center shrink-0">
+                      {group.pos}
                     </span>
-                    <span className="text-xs font-serif italic font-semibold text-stone-600 dark:text-stone-400 bg-paper-100 dark:bg-paper-800 px-1.5 py-0.5 rounded">
-                      {sense.pos}
-                    </span>
-                    <span className="text-sm font-medium text-stone-900 dark:text-stone-100">
-                      {sense.definition}
-                    </span>
-                    {sense.freq && (
-                      <span className="text-[11px] font-mono text-stone-400 ml-auto">
-                        考频 {sense.freq}次
-                      </span>
-                    )}
-                  </div>
-
-                  {sense.examples && sense.examples.length > 0 && (
-                    <div className="space-y-2 pl-3 border-l-2 border-paper-200 dark:border-paper-700 text-xs mt-2">
-                      {sense.examples.map((ex, exI) => (
-                        <div key={ex.id || exI} className="space-y-1">
-                          <p className="text-stone-800 dark:text-stone-200 leading-relaxed font-serif text-xs">
-                            {ex.sentence}
-                          </p>
-                          <p className="text-stone-500 dark:text-stone-400 leading-relaxed text-[11px]">
-                            {ex.translation}
-                          </p>
-                          <p className="text-[10px] text-stone-400 dark:text-stone-500 font-mono">
-                            {ex.source}
-                          </p>
-                        </div>
+                    <div className="text-stone-900 dark:text-stone-100 font-medium leading-relaxed break-words">
+                      {group.items.map((item, i) => (
+                        <React.Fragment key={item.id || i}>
+                          {i > 0 && <span className="text-stone-300 dark:text-stone-600 mx-1.5">·</span>}
+                          <span>{item.definition}</span>
+                          {item.freq > 0 && (
+                            <span className="ml-1 text-[10px] font-mono text-amber-700 dark:text-amber-300">
+                              ({item.freq}次)
+                            </span>
+                          )}
+                        </React.Fragment>
                       ))}
                     </div>
+                  </div>
+                  {group.totalFreq > 0 && (
+                    <span className="text-[10px] font-mono text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-200/60 dark:border-amber-900/40 shrink-0 whitespace-nowrap">
+                      共 {group.totalFreq}次
+                    </span>
                   )}
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Authentic Examples Below */}
+          {dedupedExamples.length > 0 && (
+            <div className="space-y-2">
+              <div className="text-xs font-semibold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
+                真题考点原句 ({dedupedExamples.length})
+              </div>
+              <div className="space-y-2">
+                {dedupedExamples.map((ex, idx) => (
+                  <div key={idx} className="p-2.5 bg-paper-50/70 dark:bg-paper-850/70 rounded border border-paper-200/70 dark:border-paper-800 space-y-1 text-xs">
+                    <div className="text-[10px] text-stone-500 dark:text-stone-400">
+                      考查：{ex.pos} {ex.def}
+                    </div>
+                    <p className="text-stone-800 dark:text-stone-200 leading-relaxed font-serif text-xs">
+                      {ex.sentence}
+                    </p>
+                    <p className="text-stone-500 dark:text-stone-400 leading-relaxed text-[11px]">
+                      {ex.translation}
+                    </p>
+                    <p className="text-[10px] text-stone-400 dark:text-stone-500 font-mono">
+                      {ex.source}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Record History */}
           {record && (

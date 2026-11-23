@@ -85,6 +85,19 @@ function isMistakeCandidate(
   );
 }
 
+function deduplicateBySpelling(list: WordEntry[]): WordEntry[] {
+  const seen = new Set<string>();
+  const out: WordEntry[] = [];
+  for (const w of list) {
+    const key = w.word.trim().toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push(w);
+    }
+  }
+  return out;
+}
+
 /**
  * 获取考前冲刺专题对应的筛选与排序后词单
  */
@@ -105,9 +118,10 @@ export function getSprintWords(
     return true;
   });
 
+  let result: WordEntry[];
   switch (packKey) {
     case 'high_freq_1199': {
-      return pool
+      result = pool
         .filter((w) => w.isHighFreq1199 || (w.kaoyanRank !== undefined && w.kaoyanRank <= 1199))
         .sort((a, b) => {
           const rankA = a.kaoyanRank ?? 9999;
@@ -115,10 +129,11 @@ export function getSprintWords(
           if (rankA !== rankB) return rankA - rankB;
           return b.totalFreq - a.totalFreq;
         });
+      break;
     }
 
     case 'mistakes_clear': {
-      return pool
+      result = pool
         .filter((w) => isMistakeCandidate(w, records[w.id], now))
         .sort((a, b) => {
           const recA = records[a.id];
@@ -128,29 +143,32 @@ export function getSprintWords(
           if (errB !== errA) return errB - errA;
           return b.totalFreq - a.totalFreq;
         });
+      break;
     }
 
     case 'recent_5_years': {
-      return pool
+      result = pool
         .filter((w) => getRecentYearHitCount(w) > 0)
         .sort((a, b) => {
           const hitDiff = getRecentYearHitCount(b) - getRecentYearHitCount(a);
           if (hitDiff !== 0) return hitDiff;
           return b.totalFreq - a.totalFreq;
         });
+      break;
     }
 
     case 'polysemy_killer': {
-      return pool
+      result = pool
         .filter((w) => w.senses.length >= 3 && w.totalFreq >= 3)
         .sort((a, b) => {
           if (b.senses.length !== a.senses.length) return b.senses.length - a.senses.length;
           return b.totalFreq - a.totalFreq;
         });
+      break;
     }
 
     case 'unstudied_high_freq': {
-      return pool
+      result = pool
         .filter((w) => {
           const rec = records[w.id];
           return !rec || !rec.firstStudyTime;
@@ -161,17 +179,21 @@ export function getSprintWords(
           if (rankA !== rankB) return rankA - rankB;
           return b.totalFreq - a.totalFreq;
         });
+      break;
     }
 
     case 'favorite_sprint': {
-      return pool
+      result = pool
         .filter((w) => Boolean(records[w.id]?.isFavorite))
         .sort((a, b) => b.totalFreq - a.totalFreq);
+      break;
     }
 
     default:
-      return pool.sort((a, b) => b.totalFreq - a.totalFreq);
+      result = pool.sort((a, b) => b.totalFreq - a.totalFreq);
   }
+
+  return examFilter === 'all' ? deduplicateBySpelling(result) : result;
 }
 
 /**

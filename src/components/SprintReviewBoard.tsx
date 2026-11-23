@@ -32,6 +32,7 @@ import {
   saveSprintState,
 } from '../storage/sessionStore';
 import { playWordPronunciation } from '../utils/sound';
+import { mergeSensesByPos } from '../utils/senseFormatter';
 
 interface SprintReviewBoardProps {
   words: WordEntry[];
@@ -526,9 +527,11 @@ export const SprintReviewBoard: React.FC<SprintReviewBoardProps> = ({
             const isMeaningVisible = !hideDefinitions || revealedIds.has(word.id);
             const isExampleOpen = expandedExampleIds.has(word.id);
 
-            // 按考频降序排列释义
-            const sortedSenses = [...word.senses].sort((a, b) => (b.freq || 0) - (a.freq || 0));
-            const firstExample = sortedSenses.find((s) => s.examples && s.examples.length > 0)?.examples[0];
+            // 同词性合并去重，按考频降序排列释义
+            const mergedGroups = mergeSensesByPos(word.senses);
+            const firstExample = mergedGroups
+              .flatMap((g) => g.items)
+              .find((item) => item.examples && item.examples.length > 0)?.examples[0];
 
             return (
               <div
@@ -591,25 +594,32 @@ export const SprintReviewBoard: React.FC<SprintReviewBoardProps> = ({
                       )}
                     </div>
 
-                    {/* 中间释义区：默认遮罩时点击词条即揭晓，按考频展示 */}
+                    {/* 中间释义区：同词性合并去重展示 */}
                     <div className="pl-7">
                       {isMeaningVisible ? (
-                        <div className="space-y-1">
-                          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs">
-                            {sortedSenses.map((s, sIdx) => (
-                              <span key={s.id || sIdx} className="inline-flex items-baseline gap-1">
-                                <span className="font-serif italic text-[11px] font-semibold text-stone-500 dark:text-stone-400">
-                                  {s.pos}
+                        <div className="space-y-1.5">
+                          <div className="space-y-1 text-xs">
+                            {mergedGroups.map((group) => (
+                              <div key={group.pos} className="flex items-baseline gap-1.5 leading-relaxed">
+                                <span className="font-serif italic text-[10px] font-semibold text-stone-600 dark:text-stone-300 bg-paper-100 dark:bg-paper-800 px-1.5 py-0.2 rounded min-w-[36px] text-center shrink-0">
+                                  {group.pos}
                                 </span>
-                                <span className="text-stone-800 dark:text-stone-200 font-medium">
-                                  {s.definition}
+                                <span className="text-stone-800 dark:text-stone-200 font-medium break-words">
+                                  {group.items.map((item, i) => (
+                                    <React.Fragment key={item.id || i}>
+                                      {i > 0 && (
+                                        <span className="text-stone-300 dark:text-stone-600 mx-1.5">·</span>
+                                      )}
+                                      <span>{item.definition}</span>
+                                      {item.freq > 0 && (
+                                        <span className="ml-0.5 text-[10px] font-mono text-amber-700 dark:text-amber-300">
+                                          ({item.freq}次)
+                                        </span>
+                                      )}
+                                    </React.Fragment>
+                                  ))}
                                 </span>
-                                {s.freq && s.freq > 0 ? (
-                                  <span className="text-[10px] font-mono text-amber-700 dark:text-amber-300">
-                                    ({s.freq}次)
-                                  </span>
-                                ) : null}
-                              </span>
+                              </div>
                             ))}
                           </div>
 
